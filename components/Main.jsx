@@ -98,11 +98,11 @@ const FloatingText = React.memo(() => {
       onMouseOver={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}
     >
-      Hi, I'm Justin.
+      Hi, I&apos;m Justin.
     </div>
   );
 });
-
+FloatingText.displayName = 'FloatingText';
 
 const Main = () => {
   return (
