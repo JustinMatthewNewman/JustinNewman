@@ -8,12 +8,15 @@ const About = () => {
     <div id='about' className='w-full md:h-screen p-2 flex items-center py-16'>
       <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
         <div className='col-span-2'>
-          <p className='uppercase text-xl tracking-widest text-[#2a2a2a]'>
+          {/* <p className='uppercase text-xl tracking-widest text-[#2a2a2a]'>
             About
           </p>
-          <h2 className='py-4'>Who I Am</h2>
+          <h2 className='py-4'>Who I Am</h2> */}
+          <div className="bg-white bg-opacity-40 rounded-lg backdrop-blur-lg p-5">
+
+
           <p className='py-2 text-gray-600'>
-          I&apos;m Justin Newman, a dedicated software engineer passionate about creating cutting-edge full-stack applications. 
+          A dedicated software engineer passionate about creating cutting-edge full-stack applications. 
           With a Bachelor&apos;s Degree in Computer Science and minor in Data Analytics from James Madison University, 
           I have a solid academic foundation that backs up my technical skills. Proficient in numerous programming languages, 
           including Java, JavaScript, Python, and PHP, I&apos;m comfortable working on both the front-end and back-end development, 
@@ -27,6 +30,8 @@ const About = () => {
           learned to thrive in a fully remote and agile environment, managing tasks effectively and coordinating seamlessly with team members.
           Beyond this, I also hold experience in the world of live productions, where I&apos;ve automated athletic statistics rendering software for Telemedia Productions and James Madison University.
           </p>
+
+          </div>
           <Link href='/#projects'>
             <p className='py-2 text-gray-600 underline cursor-pointer'>
               Check out some of my latest projects.
