@@ -30,6 +30,7 @@ const About = () => {
           learned to thrive in a fully remote and agile environment, managing tasks effectively and coordinating seamlessly with team members.
           Beyond this, I also hold experience in the world of live productions, where I&apos;ve automated athletic statistics rendering software for Telemedia Productions and James Madison University.
           </p>
+          <p className='py-2 text-slate-600'>- Justin Matthew Newman</p>
 
           </div>
           <Link href='/#projects'>
