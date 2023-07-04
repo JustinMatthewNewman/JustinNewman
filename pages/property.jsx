@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import propertyImg from '../public/assets/projects/property.jpg';
+// import propertyImg from '../public/assets/projects/property.jpg';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
 
@@ -9,13 +9,13 @@ const property = () => {
     <div className='w-full'>
       <div className='w-screen h-[50vh] relative'>
         <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />
-        <Image
+        {/* <Image
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
           src={propertyImg}
           alt='/'
-        />
+        /> */}
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
           <h2 className='py-2'>Property Finders</h2>
           <h3>React JS / Tailwind / Firebase</h3>
