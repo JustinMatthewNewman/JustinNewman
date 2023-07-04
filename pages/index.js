@@ -111,12 +111,12 @@ const Home = () => {
         <pointLight position={[10, 10, 10]} />
         <WavyLines />
       </Canvas>
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: '1440px', margin: '0 auto' }}>
+      <div style={{ position: 'relative', zIndex: 1 }}>
+        
         <About />
-        <div style={{padding: "50px 0"}}></div>
+        <Skills />
         <Projects />
-        {/* <Skills /> */}
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ export const Card4 = () => (
             </Col>
             <Col>
               <Text color="#d1d1d1" size={12}>
-                Publications
+                Analysis Work
               </Text>
               <Text color="#d1d1d1" size={12}>
                 by Justin Newman
