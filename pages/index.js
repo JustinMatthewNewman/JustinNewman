@@ -114,9 +114,10 @@ const Home = () => {
       <div style={{ position: 'relative', zIndex: 1 }}>
         
         <About />
-        <Skills />
+        <div style={{padding: "50px 0"}}></div> {/* Here's the padding */}
         <Projects />
-        <Contact />
+        {/* <Skills /> */}
+        {/* <Contact /> */}
       </div>
     </div>
   );
