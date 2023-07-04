@@ -13,6 +13,7 @@
     "@deck.gl/core": "^8.9.19",
     "@deck.gl/layers": "^8.9.19",
     "@mapbox/tiny-sdf": "^2.0.6",
+    "@nextui-org/react": "^1.0.0-beta.13",
     "@react-three/drei": "^9.77.10",
     "@react-three/fiber": "^8.13.4",
     "@types/three": "^0.152.1",
