@@ -17,9 +17,9 @@ const Resume = () => {
       <div className='flex justify-between items-center p-2 md:p-8 bg-white shadow-lg rounded-md w-full md:w-3/4 mx-auto my-8'>
         <div className='flex items-center space-x-2'>
           <FaFileAlt className='w-8 h-8 text-blue-600'/>
-          <h1 className='text-xl md:text-2xl font-semibold'>mpi.pdf</h1>
+          <h1 className='text-xl md:text-2xl font-semibold'>MPI_Algorithmic_Performance_Analysis.pdf</h1>
         </div>
-        <a href='/assets/mpi.pdf' download className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200'>Download</a>
+        <a href='/assets/MPI_Algorithmic_Performance_Analysis.pdf' download className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200'>Download</a>
       </div>
       <div className='flex justify-between items-center p-2 md:p-8 bg-white shadow-lg rounded-md w-full md:w-3/4 mx-auto my-8'>
         <div className='flex items-center space-x-2'>
@@ -31,16 +31,30 @@ const Resume = () => {
       <div className='flex justify-between items-center p-2 md:p-8 bg-white shadow-lg rounded-md w-full md:w-3/4 mx-auto my-8'>
         <div className='flex items-center space-x-2'>
           <FaFileAlt className='w-8 h-8 text-blue-600'/>
-          <h1 className='text-xl md:text-2xl font-semibold'>Cuda_Project.pdf</h1>
+          <h1 className='text-xl md:text-2xl font-semibold'>Parallel_Image_Processing_with_CUDA.pdf</h1>
         </div>
-        <a href='/assets/Cuda_Project.pdf' download className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200'>Download</a>
+        <a href='/assets/Parallel_Image_Processing_with_CUDA.pdf' download className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200'>Download</a>
       </div>
       <div className='flex justify-between items-center p-2 md:p-8 bg-white shadow-lg rounded-md w-full md:w-3/4 mx-auto my-8'>
         <div className='flex items-center space-x-2'>
           <FaFileAlt className='w-8 h-8 text-blue-600'/>
-          <h1 className='text-xl md:text-2xl font-semibold'>MATH268.pdf</h1>
+          <h1 className='text-xl md:text-2xl font-semibold'>AI_ART_ANALYSIS.pdf</h1>
         </div>
-        <a href='/assets/MATH268.pdf' download className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200'>Download</a>
+        <a href='/assets/AI_ART_ANALYSIS.pdf' download className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200'>Download</a>
+      </div>
+      <div className='flex justify-between items-center p-2 md:p-8 bg-white shadow-lg rounded-md w-full md:w-3/4 mx-auto my-8'>
+        <div className='flex items-center space-x-2'>
+          <FaFileAlt className='w-8 h-8 text-blue-600'/>
+          <h1 className='text-xl md:text-2xl font-semibold'>MachineLearning.pdf</h1>
+        </div>
+        <a href='/assets/MachineLearning.pdf' download className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200'>Download</a>
+      </div>
+      <div className='flex justify-between items-center p-2 md:p-8 bg-white shadow-lg rounded-md w-full md:w-3/4 mx-auto my-8'>
+        <div className='flex items-center space-x-2'>
+          <FaFileAlt className='w-8 h-8 text-blue-600'/>
+          <h1 className='text-xl md:text-2xl font-semibold'>DataVisualization_R.pdf</h1>
+        </div>
+        <a href='/assets/DataVisualization_R.pdf' download className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200'>Download</a>
       </div>
       
     </div>    </div>
