@@ -1,6 +1,9 @@
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
+import Link from "next/link";
 
 export const Card1 = () => (
+    <Link href="https://www.MelodifyLabs.com">
+
   <Card 
   isPressable
   isHoverable
@@ -12,7 +15,7 @@ export const Card1 = () => (
         width="100%"
         height="100%"
         objectFit="cover"
-        alt="Card example background"
+        alt="MELODIFY LABS"
       />
     </Card.Body>
     <Card.Footer
@@ -51,5 +54,7 @@ export const Card1 = () => (
       </Row>
     </Card.Footer>
   </Card>
+  </Link>
+
 );
 export default Card1;

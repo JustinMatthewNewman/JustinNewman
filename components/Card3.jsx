@@ -1,6 +1,10 @@
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
+import Link from "next/link";
 
 export const Card3 = () => (
+    <Link href="/resume">
+
+
   <Card 
   isPressable
   isHoverable
@@ -59,5 +63,6 @@ export const Card3 = () => (
       </Row>
     </Card.Footer>
   </Card>
+  </Link>
 );
 export default Card3;
