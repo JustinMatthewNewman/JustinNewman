@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <div id='skills' className='w-full p-4 flex justify-center'>
       <Grid.Container gap={2} justify="center">
-      <Grid>
+      <Grid style={{zIndex: 2}}>
         <Collapse.Group shadow>
           <Collapse
             title={<Text h4>Python 3</Text>}
