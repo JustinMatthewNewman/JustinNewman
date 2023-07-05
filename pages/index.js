@@ -7,19 +7,6 @@ import Head from 'next/head';
 const baseColor = new THREE.Color(0xecc7fc);
 const gradient = new THREE.Color("lightblue");
 
-const lineGeometry = (() => {
-  const geometry = new THREE.BufferGeometry();
-  const points = [];
-  for (let i = 0; i < 200; i++) {
-    const x = i / 10;
-    const y = Math.sin(i / 25);
-    points.push(new THREE.Vector3(x - 10, y - 1, 0));
-  }
-  geometry.setFromPoints(points);
-  geometry.rotateZ(0.4);
-  return geometry;
-})();
-
 const WavyLines = () => {
   const lineRefs = useRef([]);
   const [scrollY, setScrollY] = useState(0);
@@ -85,14 +72,27 @@ const WavyLines = () => {
     []
   );
 
-  const lines = useMemo(() => {
-    return new Array(6).fill().map((_, i) => (
-      <line ref={addRef} key={i} position-x={i * 1.25}>
-        <shaderMaterial attach="material" args={[shaderMaterial]} />
-        <primitive object={lineGeometry} attach="geometry" />
-      </line>
-    ));
-  }, [shaderMaterial]);
+  const lines = useMemo(
+    () =>
+      new Array(6).fill().map((_, i) => {
+        const geometry = new THREE.BufferGeometry();
+        const points = [];
+        for (let i = 0; i < 200; i++) {
+          const x = i / 10;
+          const y = Math.sin(i / 25);
+          points.push(new THREE.Vector3(x - 10, y - 1, 0));
+        }
+        geometry.setFromPoints(points);
+        geometry.rotateZ(0.4);
+        return (
+          <line ref={addRef} key={i} position-x={i * 1.25}>
+            <shaderMaterial attach="material" args={[shaderMaterial]} />
+            <primitive object={geometry} attach="geometry" />
+          </line>
+        );
+      }),
+    [shaderMaterial]
+  );
 
   return lines;
 };
