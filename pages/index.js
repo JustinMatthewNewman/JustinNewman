@@ -1,15 +1,10 @@
-import Head from 'next/head'
-import About from '../components/About'
-import Contact from '../components/Contact'
-import Main from '../components/Main'
-import Projects from '../components/Projects'
-import Skills from '../components/Skills'
 
 
-import React, { useEffect, useRef, useState, useMemo } from 'react';
+import React, { Suspense, useEffect, useRef, useState, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
-
+import dynamic from 'next/dynamic'
+import Head from 'next/head';
 const baseColor = new THREE.Color(0xecc7fc);
 const gradient = new THREE.Color("lightblue");
 
@@ -46,12 +41,13 @@ const WavyLines = () => {
     () =>
       new THREE.ShaderMaterial({
         vertexShader: `
-          varying vec3 vUv;
+        varying vec3 vUv;
 
-          void main() {
-            vUv = position;
-            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-          }
+        void main() {
+          vUv = position;
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+        
         `,
         fragmentShader: `
           uniform vec3 gradient;
@@ -99,6 +95,12 @@ const WavyLines = () => {
 
 
 const Home = () => {
+  const About = dynamic(() => import('../components/About'))
+  const Contact = dynamic(() => import('../components/Contact'));
+  const Main = dynamic(() => import('../components/Main'));
+  const Projects = dynamic(() => import('../components/Projects'));
+  const Skills = dynamic(() => import('../components/Skills'));
+
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gridTemplateRows: 'auto 1fr' }}>
       <Head>
@@ -106,17 +108,21 @@ const Home = () => {
         <meta name="description" content="I’m a human." />
         <link rel="icon" href="/fav.png" />
       </Head>
-      <Main />
-            <Canvas style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }}>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Main />
+      </Suspense>
+      <Canvas style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }}>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         <WavyLines />
       </Canvas>
       <div style={{ overflow: 'auto', display: 'grid', gridTemplateRows: 'auto', rowGap: '50px' }}>
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Suspense fallback={<div>Loading...</div>}>
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </Suspense>
       </div>
     </div>
   );
