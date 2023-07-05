@@ -2,7 +2,11 @@ import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 
 
 export const Card5 = () => (
-  <Card css={{ w: "100%", h: "400px" }}>
+  <Card 
+  isPressable
+  isHoverable
+  variant="bordered"
+  css={{ w: "100%", h: "400px" }}>
     <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
       {/* <Col>
         <Text size={12} weight="bold" transform="uppercase" color="#9E9E9E">
@@ -37,7 +41,7 @@ export const Card5 = () => (
           <Row>
             <Col span={3}>
               <Card.Image
-                src="/assets/projects/jmu.png"
+                src="/assets/projects/webdev.webp"
                 css={{ bg: "transparent", br: "50%" }}
                 height={40}
                 width={40}

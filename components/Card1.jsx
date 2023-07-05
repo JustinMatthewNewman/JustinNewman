@@ -1,10 +1,14 @@
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 
 export const Card1 = () => (
-  <Card css={{ w: "100%", h: "400px" }}>
+  <Card 
+  isPressable
+  isHoverable
+  variant="bordered"
+  css={{ w: "100%", h: "400px" }}>
     <Card.Body css={{ p: 0 }}>
       <Card.Image
-        src="assets/projects/melodifylabs.jpg"
+        src="assets/projects/melodifylabs.webp"
         width="100%"
         height="100%"
         objectFit="cover"
