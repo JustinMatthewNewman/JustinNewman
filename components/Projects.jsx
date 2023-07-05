@@ -16,11 +16,11 @@ const Projects = () => {
         <div >
           <Grid.Container gap={2} justify="center">
             <Grid xs={12} sm={4}>
-              <Link href="https://www.MelodifyLabs.com">
-                <a target='_blank'>
+              {/* <Link href="https://www.MelodifyLabs.com">
+                <a target='_blank'> */}
                   <Card1 />
-                </a>
-              </Link>
+                {/* </a>
+              </Link> */}
             </Grid>
             <Grid xs={12} sm={4}>
               <Link href="https://www.CSCODE.org">
@@ -30,25 +30,25 @@ const Projects = () => {
               </Link>
             </Grid>
             <Grid xs={12} sm={4}>
-              <Link href="https://github.com/JustinMatthewNewman">
-                <a target='_blank'>
+              {/* <Link href="https://github.com/JustinMatthewNewman">
+                <a target='_blank'> */}
                   <Card3 />
-                </a>
-              </Link>
+                {/* </a>
+              </Link> */}
             </Grid>
             <Grid xs={12} sm={5}>
-              <Link href="/resume">
-                <a target='_blank'>
+              {/* <Link href="/resume">
+                <a target='_blank'> */}
                   <Card4 />
-                </a>
-              </Link>
+                {/* </a>
+              </Link> */}
             </Grid>
             <Grid xs={12} sm={7}>
-              <Link href="https://w3stu.cs.jmu.edu/newma4jm/website/index.html">
-                <a target='_blank'>
+              {/* <Link href="https://w3stu.cs.jmu.edu/newma4jm/website/index.html">
+                <a target='_blank'> */}
                   <Card5 />
-                </a>
-              </Link>
+                {/* </a>
+              </Link> */}
             </Grid>
           </Grid.Container>
         </div>
