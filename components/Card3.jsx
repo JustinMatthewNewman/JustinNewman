@@ -12,9 +12,11 @@ export const Card3 = () => {
     });
     return (
         <Card
-            isPressable
-            isHoverable
+        isPressable
+        isHoverable
+        {...pressProps}
             variant="bordered"
+
             css={{ w: "100%", h: "400px" }}>
             <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
