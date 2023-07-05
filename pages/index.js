@@ -1,12 +1,12 @@
-
-
 import React, { Suspense, useEffect, useRef, useState, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
+
 const baseColor = new THREE.Color(0xecc7fc);
 const gradient = new THREE.Color("lightblue");
+
 const lineGeometry = (() => {
   const geometry = new THREE.BufferGeometry();
   const points = [];
@@ -19,9 +19,11 @@ const lineGeometry = (() => {
   geometry.rotateZ(0.4);
   return geometry;
 })();
+
 const WavyLines = () => {
   const lineRefs = useRef([]);
   const [scrollY, setScrollY] = useState(0);
+  const [targetRotation, setTargetRotation] = useState(0);
 
   const addRef = (el) => {
     if (el && !lineRefs.current.includes(el)) {
@@ -31,8 +33,9 @@ const WavyLines = () => {
 
   useFrame(() => {
     if (lineRefs.current.length > 0) {
+      const newRotation = THREE.MathUtils.lerp(lineRefs.current[0].rotation.z, targetRotation, 0.1);
       lineRefs.current.forEach((line) => {
-        line.rotation.z = scrollY * 0.001;
+        line.rotation.z = newRotation;
       });
     }
   });
@@ -46,7 +49,11 @@ const WavyLines = () => {
     };
   }, []);
 
-  const lineThickness = 2; // Adjust the line thickness here
+  useEffect(() => {
+    setTargetRotation(scrollY * 0.001);
+  }, [scrollY]);
+
+  const lineThickness = 2;
 
   const shaderMaterial = useMemo(
     () =>
@@ -58,7 +65,6 @@ const WavyLines = () => {
           vUv = position;
           gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
         }
-        
         `,
         fragmentShader: `
           uniform vec3 gradient;
@@ -66,7 +72,7 @@ const WavyLines = () => {
           varying vec3 vUv;
 
           void main() {
-            float factor = (vUv.y + 1.0) / 2.0; // Adjust gradient direction
+            float factor = (vUv.y + 1.0) / 2.0;
             gl_FragColor = vec4(mix(baseColor, gradient, factor), 1.0);
           }
         `,
@@ -74,7 +80,7 @@ const WavyLines = () => {
           gradient: { value: gradient },
           baseColor: { value: baseColor },
         },
-        linewidth: lineThickness, // Set the line thickness
+        linewidth: lineThickness,
       }),
     []
   );
@@ -90,7 +96,6 @@ const WavyLines = () => {
 
   return lines;
 };
-
 
 const Home = () => {
   const About = dynamic(() => import('../components/About'))
