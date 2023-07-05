@@ -16,39 +16,19 @@ const Projects = () => {
         <div >
           <Grid.Container gap={2} justify="center">
             <Grid xs={12} sm={4}>
-              {/* <Link href="https://www.MelodifyLabs.com">
-                <a target='_blank'> */}
-                  <Card1 />
-                {/* </a>
-              </Link> */}
+              <Card1 />
             </Grid>
             <Grid xs={12} sm={4}>
-              <Link href="https://www.CSCODE.org">
-                <a target='_blank'>
-                  <Card2 />
-                </a>
-              </Link>
+              <Card2 />
             </Grid>
             <Grid xs={12} sm={4}>
-              {/* <Link href="https://github.com/JustinMatthewNewman">
-                <a target='_blank'> */}
-                  <Card3 />
-                {/* </a>
-              </Link> */}
+              <Card3 />
             </Grid>
             <Grid xs={12} sm={5}>
-              {/* <Link href="/resume">
-                <a target='_blank'> */}
-                  <Card4 />
-                {/* </a>
-              </Link> */}
+              <Card4 />
             </Grid>
             <Grid xs={12} sm={7}>
-              {/* <Link href="https://w3stu.cs.jmu.edu/newma4jm/website/index.html">
-                <a target='_blank'> */}
-                  <Card5 />
-                {/* </a>
-              </Link> */}
+              <Card5 />
             </Grid>
           </Grid.Container>
         </div>
