@@ -18,8 +18,8 @@ const Skills = () => {
           >
             <Text>
             In CS412 Applied Algorithms, I worked on solving the knapsack problem efficiently using dynamic programming techniques in Python. 
-            I optimized the computation by leveraging memoization and utilizing Python's data structures like dictionaries and lists. 
-            Additionally, I implemented Dijkstra's algorithm, Bellman-Ford algorithm, Prim's algorithm, and Burvka's algorithm for graph-related problems. 
+            I optimized the computation by leveraging memoization and utilizing Python&apos;s data structures like dictionaries and lists. 
+            Additionally, I implemented Dijkstra&apos;s algorithm, Bellman-Ford algorithm, Prim&apos;s algorithm, and Burvka&apos;s algorithm for graph-related problems. 
             I utilized advanced language features such as higher order functions, lambda functions, and list comprehension.
             </Text>
           </Collapse>
@@ -63,18 +63,18 @@ const Skills = () => {
             }
           >
             <Text>
-            I developed a data visualization tool that plotted car accidents across a map of the US. One challenge was the large size of the data files, which limited efficient analysis. To overcome this obstacle, I implemented a data segmentation approach, splitting the data into smaller segments and distributing them across various hosts. I utilized advanced language features like asynchronous programming and promises to handle the distributed processing efficiently. By leveraging JavaScript's capabilities, I effectively visualized the car accident data, providing insights into patterns and trends while efficiently managing large datasets.
+            I developed a data visualization tool that plotted car accidents across a map of the US. One challenge was the large size of the data files, which limited efficient analysis. To overcome this obstacle, I implemented a data segmentation approach, splitting the data into smaller segments and distributing them across various hosts. I utilized advanced language features like asynchronous programming and promises to handle the distributed processing efficiently. By leveraging JavaScript&apos;s capabilities, I effectively visualized the car accident data, providing insights into patterns and trends while efficiently managing large datasets.
             </Text>
           </Collapse>
           <Collapse
             title={<Text h4>Firebase</Text>}
-            subtitle="Have you used Firebase as a backend solution in any of your projects? Describe Firebase's real-time database, authentication, and cloud functions."
+            subtitle="Have you used Firebase as a backend solution in any of your projects? Describe Firebase&apos;s real-time database, authentication, and cloud functions."
             contentLeft={
               <SiFirebase size={30} />
             }
           >
             <Text>
-            In a CSCode Instagram clone, Firebase's real-time database feature was employed to store and synchronize user posts, comments, and likes in real-time. This allowed users to experience instant updates and interactions within the application. Firebase's authentication service was utilized for user authentication, enabling secure access to the Instagram clone. In another project, Melodify Labs' song generation platform, Firebase's cloud functions were utilized to handle serverless computation tasks. This allowed for efficient execution of heavy computation tasks in the background, enabling the generation of complex musical compositions in real-time.
+            In a CSCode Instagram clone, Firebase&apos;s real-time database feature was employed to store and synchronize user posts, comments, and likes in real-time. This allowed users to experience instant updates and interactions within the application. Firebase&apos;s authentication service was utilized for user authentication, enabling secure access to the Instagram clone. In another project, Melodify Labs&apos; song generation platform, Firebase&apos;s cloud functions were utilized to handle serverless computation tasks. This allowed for efficient execution of heavy computation tasks in the background, enabling the generation of complex musical compositions in real-time.
             </Text>
           </Collapse>
         </Collapse.Group>
