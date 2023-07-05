@@ -106,11 +106,11 @@ const Home = () => {
         <link rel="icon" href="/fav.png" />
       </Head>
       <Main />
-      <Canvas style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }}>
+      {/* <Canvas style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }}>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         <WavyLines />
-      </Canvas>
+      </Canvas> */}
       <div style={{ position: 'relative', zIndex: 1 }}>
         
         <About />
