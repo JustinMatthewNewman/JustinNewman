@@ -19,7 +19,7 @@ export const Card5 = () => (
     </Card.Header>
     <Card.Body css={{ p: 0 }}>
       <Card.Image
-        src="/assets/projects/webdev.png"
+        src="/assets/projects/webdev.webp"
                 objectFit="cover"
         width="100%"
         height="100%"
@@ -40,13 +40,7 @@ export const Card5 = () => (
         <Col>
           <Row>
             <Col span={3}>
-              <Card.Image
-                src="/assets/projects/webdev.webp"
-                css={{ bg: "transparent", br: "50%" }}
-                height={40}
-                width={40}
-                alt="app icon"
-              />
+              
             </Col>
             <Col>
               <Text color="#d1d1d1" size={12}>
