@@ -26,14 +26,11 @@ const Resume = () => {
                 </a>
               </Card>              
             </div>
-            <div className='p-4'>
-            <Analysis/>
-
-            </div>
 
 
             
         </div>    
+        <Analysis/>
     </div>
   );
 };

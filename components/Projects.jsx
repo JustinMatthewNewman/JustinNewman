@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <div id='projects' className='w-full'>
       <div className='max-w-[1240px] mx-auto px-2 py-16'>
-        <h2 className='py-4'>Solutions</h2>
+        {/* <h2 className='py-4'>Solutions</h2> */}
         <div >
           <Grid.Container gap={2} justify="center">
             <Grid xs={12} sm={4}>
