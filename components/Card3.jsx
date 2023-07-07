@@ -7,7 +7,7 @@ export const Card3 = () => {
     const { pressProps, isPressed } = usePress({
         onPress: () => {
             // Handle the press event here
-            window.location.href = "https://github.com/JustinMatthewNewman";
+            window.location.href = "/star";
         }
     });
     return (
