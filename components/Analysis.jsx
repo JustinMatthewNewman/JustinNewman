@@ -37,8 +37,8 @@ const Analysis = () => {
       }
 
   return (
-    <div id='analysis' className='w-full p-4 flex justify-center'>
-      <div className="w-full md:w-3/4 mx-auto">
+    <div id='analysis' className='w-full p-6 flex justify-center'>
+      <div className="max-w-[1240px] md:w-3/4 mx-auto">
               
               <Grid.Container gap={2} justify="center">
                 <Grid style={{zIndex: 2}}>
