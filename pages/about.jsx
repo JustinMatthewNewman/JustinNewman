@@ -1,9 +1,13 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { FaCode, FaLaptopCode, FaMusic } from 'react-icons/fa';
+import { Grid } from "@nextui-org/react";
+
 
 const About = () => {
   const About = dynamic(() => import('../components/About'));
+  const Card4 = dynamic(() => import('../components/FoodCard'));
+  const Card5 = dynamic(() => import('../components/TravelCard'));
 
   const getCurrentHour = () => {
     const currentHour = new Date().getHours();
@@ -50,6 +54,15 @@ const About = () => {
           <FaMusic className="text-4xl" />
         </div>
       </section>
+        <Grid.Container className="p-3" gap={2} justify="center">
+     
+      <Grid xs={12} sm={5}>
+        <Card4 />
+      </Grid>
+      <Grid xs={12} sm={7}>
+        <Card5 />
+      </Grid>
+    </Grid.Container>
     </div>
   );
 };
