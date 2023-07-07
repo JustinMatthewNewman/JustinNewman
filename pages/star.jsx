@@ -69,27 +69,23 @@ const star = () => {
         </Card>
         <div className="container mx-auto max-w-2xl mt-8">
 
-        <Card shadow style={{ margin: "8px" }}>
-
-
-          <div className="max-w-2xl mx-auto mt-8">
-          <h2 className="text-2xl font-bold mb-4 px-2">REAL statistics graphic renders</h2>
-
-            <Slide {...slideProperties}>
-              {images.map((image, index) => (
-                <div key={index} className="relative">
-                  <div
-                    style={{ backgroundImage: `url(${image})` }}
-                    className="h-96 bg-cover bg-center"
-                  >
-
-                  </div>
-                </div>
-              ))}
-            </Slide>
-          </div>
-
-        </Card>
+        <Card shadow style={{ margin: '8px' }}>
+      <div className="p-4">
+        <h2 className="text-2xl font-bold mb-4">REAL statistics graphic renders</h2>
+        <div className="mx-auto max-w-2xl">
+          <Slide {...slideProperties}>
+            {images.map((image, index) => (
+              <div key={index} className="relative">
+                <div
+                  style={{ backgroundImage: `url(${image})` }}
+                  className="h-64 md:h-96 bg-cover bg-center"
+                ></div>
+              </div>
+            ))}
+          </Slide>
+        </div>
+      </div>
+    </Card>
       </div>
         <Grid.Container gap={3} justify="center">
 
