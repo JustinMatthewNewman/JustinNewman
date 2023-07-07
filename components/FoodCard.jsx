@@ -23,7 +23,7 @@ export const FoodCard = () => {
                     position: "absolute",
                     bgBlur: "#0f111466",
                     borderBottom: "$borderWeights$light solid $gray800",
-                    top: 0,
+                    bottom: 0,
                     zIndex: 1,
                     borderBottomLeftRadius: "0",
                     borderBottomRightRadius: "0",
