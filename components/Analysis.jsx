@@ -13,6 +13,15 @@ const Analysis = () => {
         'MachineLearning.pdf',
         'DataVisualization_R.pdf',
       ];
+
+      const titles = [
+        'MPI Analysis',
+        'OpenMP Analysis',
+        'Parallel Image Processing',
+        'AI Art Analysis',
+        'Machine Learning',
+        'Data Visualization',
+      ];
     
       const shortDescriptions = [
         'Data Decomposition, MPI, C, Parallelism',
@@ -48,7 +57,7 @@ const Analysis = () => {
                     {files.slice(1).map((file, index) => (
                         <Collapse
                         key={index}
-                        title={<Text h4>{file}</Text>}
+                        title={<Text h4>{titles[index]}</Text>}
                         subtitle={shortDescriptions[index]}
                         contentLeft={
                             <FaFileAlt className='w-8 h-8 text-blue-600'/>
