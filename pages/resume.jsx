@@ -24,13 +24,14 @@ const Resume = () => {
                       </div>
                   </Card.Body>
                 </a>
-              </Card>              
+              </Card>          
+                  
             </div>
+        <Analysis/>
 
 
             
         </div>    
-        <Analysis/>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Collapse, Text, Grid, Button } from "@nextui-org/react";
+import { Collapse, Text, Grid, Button, Card } from "@nextui-org/react";
 import { FaFileAlt } from 'react-icons/fa'; // Importing paper icon from react-icons
 
 
@@ -37,19 +37,21 @@ const Analysis = () => {
       }
 
   return (
-    <div id='analysis' className='w-full p-6 flex justify-center'>
-      <div className="max-w-[1240px] md:w-3/4 mx-auto">
-              
+    <div id='analysis' className='w-full px-4 flex justify-center'>
+      <div className="w-full md:w-3/4 mx-auto">
+      <div css={{ margin: '12px' }}>
+        
+
               <Grid.Container gap={2} justify="center">
                 <Grid style={{zIndex: 2}}>
                   <Collapse.Group shadow>
                     {files.slice(1).map((file, index) => (
-                      <Collapse
+                        <Collapse
                         key={index}
                         title={<Text h4>{file}</Text>}
                         subtitle={shortDescriptions[index]}
                         contentLeft={
-                          <FaFileAlt className='w-8 h-8 text-blue-600'/>
+                            <FaFileAlt className='w-8 h-8 text-blue-600'/>
                         }
                         >
                           <div className='p-4'>
@@ -62,6 +64,7 @@ const Analysis = () => {
                   </Collapse.Group>
                 </Grid>
               </Grid.Container>
+                    </div>
             </div>
     </div>
   );
