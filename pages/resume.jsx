@@ -25,8 +25,8 @@ const Resume = () => {
                   </Card.Body>
                 </a>
               </Card>              
-            <Analysis/>
             </div>
+            <Analysis/>
 
 
             
