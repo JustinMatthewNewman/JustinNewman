@@ -1,17 +1,28 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTheme } from '../contexts/ThemeContext';
 import React, { useState, useEffect } from 'react';
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-// import { useRouter } from 'next/router';
+import { AiOutlineClose,AiOutlineMenu } from 'react-icons/ai';
+import { FaLinkedinIn } from 'react-icons/fa';
 import NavLogo from '../public/assets/navLogo.png'
+import { FaSun, FaMoon } from 'react-icons/fa';
+import { lightTheme, darkTheme } from '../contexts/themes';
+import { Button } from "@nextui-org/react";
+
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState('#ecf0f3');
   const [linkColor, setLinkColor] = useState('#1f2937');
+  const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    // Here you need to update your styles based on the theme
+    document.body.style.backgroundColor = theme.body;
+    document.body.style.color = theme.text;
+    // add other style updates as needed
+  }, [theme]);
   // const [position, setPosition] = useState('fixed')
   // const router = useRouter();
 
@@ -47,7 +58,7 @@ const Navbar = () => {
 
   return (
     <div
-      style={{ backgroundColor: `${navBg}` }}
+      style={{ backgroundColor: `${theme.nav}` }}
       className={
         shadow
           ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
@@ -67,7 +78,7 @@ const Navbar = () => {
           </a>
         </Link>
         <div>
-          <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
+          <ul style={{ color: `${theme.text}` }} className='hidden md:flex'>
             <li className='ml-10 text-sm uppercase hover:text-white'>
               <Link href='/'>Home</Link>
             </li>
@@ -82,6 +93,11 @@ const Navbar = () => {
             </li>
             <li className='ml-10 text-sm uppercase hover:text-white'>
               <Link href='/resume'>Resume</Link>
+            </li>
+            <li className='ml-10'>
+              <Button color={theme.nav} onClick={toggleTheme} auto ghost className="shadow-none" style={{ padding: '10px', backgroundColor: theme.body, color: theme.text,  }}>
+                {theme === lightTheme ? <FaMoon /> : <FaSun />}
+              </Button>
             </li>
             {/* <li className='ml-10 text-sm uppercase hover:text-white'>
               <Link href='/#contact'>Contact</Link>
@@ -107,13 +123,14 @@ const Navbar = () => {
       >
         {/* Side Drawer Menu */}
         <div
+        style={{ backgroundColor: `${theme.nav}` }}
           className={
             nav
               ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
               : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }
         >
-          <div>
+          <div >
             <div className='flex w-full items-center justify-between'>
               <Link href='/'>
                 <a>
@@ -165,6 +182,11 @@ const Navbar = () => {
                   Resume
                 </li>
               </Link>
+              <li className=''>
+              <Button onClick={toggleTheme} style={{ padding: '10px', backgroundColor: theme.body, color: theme.text, borderRadius: '50%' }}>
+                {theme === lightTheme ? <FaMoon /> : <FaSun />}
+              </Button>
+            </li>
               {/* <Link href='/#contact'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   Contact

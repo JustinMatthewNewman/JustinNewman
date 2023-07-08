@@ -1,15 +1,18 @@
+// pages/_app.js
+
 import Navbar from '../components/Navbar';
+import { ThemeProvider } from '../contexts/ThemeContext';
 import '../styles/globals.css';
-import { SSRProvider } from '@react-aria/ssr'
+import { SSRProvider } from '@react-aria/ssr';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Navbar />
+    <ThemeProvider>
       <SSRProvider>
-      <Component {...pageProps} />
-    </SSRProvider>
-    </>
+        <Navbar />
+        <Component {...pageProps} />
+      </SSRProvider>
+    </ThemeProvider>
   );
 }
 

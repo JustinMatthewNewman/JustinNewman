@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Collapse, Text, Grid, Avatar, Link } from "@nextui-org/react";
 import { FaPython, FaJava, FaReact, FaJsSquare } from 'react-icons/fa';
 import { SiC, SiFirebase } from 'react-icons/si';
+import { lightTheme, darkTheme } from '../contexts/themes';
+import { useTheme } from '../contexts/ThemeContext';
+
 
 const Skills = () => {
+  const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    // Here you need to update your styles based on the theme
+    document.body.style.backgroundColor = theme.body;
+    document.body.style.color = theme.text;
+    // add other style updates as needed
+  }, [theme]);
   return (
     <div id='skills' className='w-full p-4 flex justify-center'>
-      <Grid.Container gap={2} justify="center">
+      <Grid.Container gap={2} justify="center" >
       <Grid style={{zIndex: 2}}>
-        <Collapse.Group shadow>
+        <Collapse.Group shadow style={{ backgroundColor: `${theme.nav}`, color: `${theme.text}` }}>
           <Collapse
-            title={<Text h4>Python 3</Text>}
+            title={<Text h4 tyle={{ color: `${theme.text}` }}>Python 3</Text>}
             subtitle="Can you discuss a complex Python project you worked on and explain how you utilized its features and libraries to solve the problem efficiently?"
             contentLeft={
               <FaPython size={30} />

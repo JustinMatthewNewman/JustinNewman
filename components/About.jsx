@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import AboutImg from '../public/assets/profile.png';
+import { lightTheme, darkTheme } from '../contexts/themes';
+import { useTheme } from '../contexts/ThemeContext';
 
 const About = () => {
+  const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    // Here you need to update your styles based on the theme
+    document.body.style.backgroundColor = theme.body;
+    document.body.style.color = theme.text;
+    // add other style updates as needed
+  }, [theme]);
   return (
     <div id='about' className='w-full md:h-screen p-2 flex items-center py-16'>
       <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
@@ -18,7 +28,7 @@ const About = () => {
             <p className='py-2 text-gray-600'>- Justin Matthew Newman</p>
           </div>
         </div>
-        <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center bg-gray-100 justify-center p-4 hover:scale-105 ease-in duration-300'>
+        <div >
           <Image src={AboutImg} className='rounded-xl' alt='/' />
         </div>
       </div>

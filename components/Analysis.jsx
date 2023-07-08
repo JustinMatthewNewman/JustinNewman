@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Collapse, Text, Grid, Button, Card } from "@nextui-org/react";
 import { FaFileAlt } from 'react-icons/fa'; // Importing paper icon from react-icons
-
+import { lightTheme, darkTheme } from '../contexts/themes';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Analysis = () => {
+  const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    // Here you need to update your styles based on the theme
+    document.body.style.backgroundColor = theme.body;
+    document.body.style.color = theme.text;
+    // add other style updates as needed
+  }, [theme]);
+
     const files = [
         'newman_justin.pdf',
         'MPI_Algorithmic_Performance_Analysis.pdf',
@@ -53,7 +63,20 @@ const Analysis = () => {
 
               <Grid.Container gap={2} justify="center">
                 <Grid style={{zIndex: 2}}>
-                  <Collapse.Group shadow>
+                <div className="w-full md:w-3/4 mx-auto">
+              <Card style={{ backgroundColor: `${theme.nav}`, color: `${theme.text}` }} isHoverable variant="bordered" css={{ mw: "400px", margin: '12px auto' }}>
+                <a href={`/assets/${files[0]}`} download>
+                  <Card.Body>
+                      <div className='flex items-center space-x-2'>
+                          <FaFileAlt className='w-8 h-8 text-blue-600'/>
+                          <Text>{files[0]}</Text> <Text>(Resumé)</Text>
+                      </div>
+                  </Card.Body>
+                </a>
+              </Card>          
+                  
+            </div>
+                  <Collapse.Group shadow style={{ backgroundColor: `${theme.nav}`, color: `${theme.text}` }}>
                     {files.slice(1).map((file, index) => (
                         <Collapse
                         key={index}
