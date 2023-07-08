@@ -183,7 +183,7 @@ const Navbar = () => {
                 </li>
               </Link>
               <li className=''>
-              <Button onClick={toggleTheme} style={{ padding: '10px', backgroundColor: theme.body, color: theme.text, borderRadius: '50%' }}>
+              <Button color={theme.nav} onClick={toggleTheme} auto ghost className="shadow-none" style={{ padding: '10px', backgroundColor: theme.body, color: theme.text,  }}>
                 {theme === lightTheme ? <FaMoon /> : <FaSun />}
               </Button>
             </li>
