@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose,AiOutlineMenu } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 import NavLogo from '../public/assets/navLogo.png'
+import NavLogoDark from '../public/assets/justin_white.png'
 import { FaSun, FaMoon } from 'react-icons/fa';
 import { lightTheme, darkTheme } from '../contexts/themes';
 import { Button } from "@nextui-org/react";
@@ -69,7 +70,7 @@ const Navbar = () => {
         <Link href='/'>
           <a>
             <Image
-              src={NavLogo}
+              src={theme === lightTheme ? NavLogo : NavLogoDark}
               alt='/'
               width='125'
               height='50'

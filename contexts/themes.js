@@ -5,7 +5,8 @@ export const lightTheme = {
     text: '#000000',
     toggleBorder: '#FFF',
     background: '#363537',
-    nav: '#FFF'
+    nav: '#FFF',
+    logo: 'justin.png'
   };
   
   export const darkTheme = {
@@ -13,6 +14,7 @@ export const lightTheme = {
     text: '#FAFAFA',
     toggleBorder: '#6B8096',
     background: '#999',
-    nav: '#404040'
+    nav: '#404040',
+    logo: 'justin_white.png'
   };
   
