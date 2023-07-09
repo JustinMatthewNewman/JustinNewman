@@ -57,6 +57,7 @@ body::-webkit-scrollbar {
 
 body {
   scrollbar-width: none;
+  overflow-x: hidden;
 }
 
 /* Optional: Add a custom track style */
