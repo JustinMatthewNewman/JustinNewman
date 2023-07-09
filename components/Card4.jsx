@@ -1,7 +1,11 @@
+import { useEffect } from 'react';
+
+
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 import { usePress } from "react-aria";
 
-
+import { lightTheme, darkTheme } from '../contexts/themes';
+import { useTheme } from '../contexts/ThemeContext';
 export const Card4 = () => {
     const { pressProps, isPressed } = usePress({
         onPress: () => {
@@ -9,13 +13,20 @@ export const Card4 = () => {
             window.location.href = "/resume";
         }
     });
+    const { theme, toggleTheme } = useTheme();
 
+    useEffect(() => {
+      // Here you need to update your styles based on the theme
+      document.body.style.backgroundColor = theme.body;
+      document.body.style.color = theme.text;
+      // add other style updates as needed
+    }, [theme]);
     return (
         <Card
             isPressable
             isHoverable
             {...pressProps}
-
+            style={{ border: `1px solid ${theme.toggleBorder}`, backgroundColor: theme.toggleBorder }}
             variant="bordered"
             css={{ w: "100%", h: "400px" }}>
             <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
@@ -30,7 +41,7 @@ export const Card4 = () => {
             </Card.Header>
             <Card.Body css={{ p: 0 }}>
                 <Card.Image
-                    src="/assets/projects/mac.webp"
+                    src={`/assets/projects/${theme.docsImg}`}
                     objectFit="cover"
                     width="100%"
                     height="100%"
@@ -41,8 +52,8 @@ export const Card4 = () => {
                 isBlurred
                 css={{
                     position: "absolute",
-                    bgBlur: "#0f111466",
-                    borderTop: "$borderWeights$light solid $gray800",
+                    bgBlur: theme.footerBlur,
+                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
                     bottom: 0,
                     zIndex: 1,
                 }}
@@ -60,10 +71,10 @@ export const Card4 = () => {
                                 />
                             </Col>
                             <Col>
-                                <Text color="#d1d1d1" size={12}>
+                                <Text style={{ color: `${theme.text}` }} size={12}>
                                     Analysis Work
                                 </Text>
-                                <Text color="#d1d1d1" size={12}>
+                                <Text style={{ color: `${theme.text}` }} size={12}>
                                     by Justin Newman
                                 </Text>
                             </Col>

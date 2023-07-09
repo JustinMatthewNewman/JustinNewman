@@ -1,6 +1,9 @@
+import { useEffect } from 'react';
+
 import { Card, Col, Row, Text } from "@nextui-org/react";
 import { usePress } from "react-aria";
-
+import { lightTheme, darkTheme } from '../contexts/themes';
+import { useTheme } from '../contexts/ThemeContext';
 export const TravelCard = () => {
     const { pressProps, isPressed } = usePress({
         onPress: () => {
@@ -8,10 +11,19 @@ export const TravelCard = () => {
             window.location.href = "https://wanderva.site";
         }
     });
+    const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    // Here you need to update your styles based on the theme
+    document.body.style.backgroundColor = theme.body;
+    document.body.style.color = theme.text;
+    // add other style updates as needed
+  }, [theme]);
 
     return (
         <Card
             variant="bordered"
+            style={{ border: `1px solid ${theme.toggleBorder}` }}
             css={{ w: "100%", h: "400px" }}
             isPressable
             isHoverable
@@ -19,7 +31,7 @@ export const TravelCard = () => {
         >
             <Card.Body css={{ p: 0 }}>
                 <Card.Image
-                    src="/assets/travel.webp"
+                    src={`/assets/${theme.travCardImg}`}
                     objectFit="cover"
                     width="100%"
                     height="100%"
@@ -30,8 +42,8 @@ export const TravelCard = () => {
                 isBlurred
                 css={{
                     position: "absolute",
-                    bgBlur: "#0f111466",
-                    borderTop: "$borderWeights$light solid $gray800",
+                    bgBlur: theme.footerBlur,
+                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
                     bottom: 0,
                     zIndex: 1,
                 }}
@@ -41,10 +53,10 @@ export const TravelCard = () => {
                         <Row>
                             <Col span={3}></Col>
                             <Col>
-                                <Text color="#d1d1d1" size={12}>
+                                <Text style={{ color: `${theme.text}` }} size={12}>
                                     Wander VA
                                 </Text>
-                                <Text color="#d1d1d1" size={12}>
+                                <Text style={{ color: `${theme.text}` }} size={12}>
                                     A travel blog.
                                 </Text>
                             </Col>

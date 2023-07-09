@@ -1,7 +1,11 @@
+import { useEffect } from 'react';
+
+
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 import { usePress } from "react-aria";
 
-
+import { lightTheme, darkTheme } from '../contexts/themes';
+import { useTheme } from '../contexts/ThemeContext';
 export const Card3 = () => {
 
     const { pressProps, isPressed } = usePress({
@@ -10,13 +14,21 @@ export const Card3 = () => {
             window.location.href = "/star";
         }
     });
+    const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    // Here you need to update your styles based on the theme
+    document.body.style.backgroundColor = theme.body;
+    document.body.style.color = theme.text;
+    // add other style updates as needed
+  }, [theme]);
     return (
         <Card
         isPressable
         isHoverable
         {...pressProps}
             variant="bordered"
-
+            style={{ border: `1px solid ${theme.toggleBorder}`, backgroundColor: theme.toggleBorder }}
             css={{ w: "100%", h: "400px" }}>
             <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
@@ -39,7 +51,7 @@ export const Card3 = () => {
                 isBlurred
                 css={{
                     position: "absolute",
-                    bgBlur: "#ffffff66",
+                    bgBlur: theme.footerBlur,
                     borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
                     bottom: 0,
                     zIndex: 1,
@@ -47,11 +59,11 @@ export const Card3 = () => {
             >
                 <Row>
                     <Col>
-                        <Text color="#000" size={12}>
+                        <Text style={{ color: `${theme.text}` }} size={12}>
                             Athletic Statistics Software
                         </Text>
-                        <Text color="#000" size={12}>
-                            ESPN style graphic generator.
+                        <Text style={{ color: `${theme.text}` }} size={12}>
+                            ESPN style graphics.
                         </Text>
                     </Col>
                     <Col>
