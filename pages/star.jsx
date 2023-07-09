@@ -53,7 +53,7 @@ const Star = () => {
 
 
 
-      <Image className="w-screen" alt="stars" src="https://i.ibb.co/VLkL8dW/STARS.png" />
+      {/* <Image className="w-screen" alt="stars" src="https://i.ibb.co/VLkL8dW/STARS.png" /> */}
 
 
       

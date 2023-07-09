@@ -50,3 +50,16 @@ html {
   height: 100vh;
   font-size: 20px;
 }
+/* Hide scrollbars */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  scrollbar-width: none;
+}
+
+/* Optional: Add a custom track style */
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
