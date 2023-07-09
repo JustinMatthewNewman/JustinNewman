@@ -1,13 +1,12 @@
 import Image from 'next/image';
-import React from 'react';
 import soccer from '../public/assets/soccer.webp';
 import { Card, Grid, Button } from "@nextui-org/react";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import { useTheme } from '../contexts/ThemeContext';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-const star = () => {
+const Star = () => {
   const redirectToGitHub = () => {
     window.location.href = 'https://github.com/JustinMatthewNewman/Stars';
   };
@@ -54,7 +53,8 @@ const star = () => {
 
 
 
-      <img className="w-screen" alt="stars" src="https://i.ibb.co/VLkL8dW/STARS.png" />
+      <Image className="w-screen" alt="stars" src="https://i.ibb.co/VLkL8dW/STARS.png" />
+
 
       
       <div className="container mx-auto max-w-2xl mt-8">
@@ -128,4 +128,4 @@ const star = () => {
   );
 };
 
-export default star;
+export default Star;
