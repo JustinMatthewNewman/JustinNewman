@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import AboutImg from '../public/assets/profile.png';
+import AboutImgDark from '../public/assets/justin_dark.webp';
+
 import { lightTheme, darkTheme } from '../contexts/themes';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -30,7 +32,7 @@ const About = () => {
           </div>
         </div>
         <div >
-          <Image src={AboutImg} className='rounded-xl' alt='/' />
+          <Image src={theme === lightTheme ? AboutImg : AboutImgDark} className='rounded-xl' alt='/' />
         </div>
       </div>
     </div>
