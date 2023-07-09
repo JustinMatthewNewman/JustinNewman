@@ -1,19 +1,13 @@
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 import { usePress } from "react-aria";
 
-import { lightTheme, darkTheme } from '../contexts/themes';
 import { useTheme } from '../contexts/ThemeContext';
 export const Card3 = () => {
 
-    const { pressProps, isPressed } = usePress({
-        onPress: () => {
-            // Handle the press event here
-            window.location.href = "/star";
-        }
-    });
     const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -22,11 +16,13 @@ export const Card3 = () => {
     document.body.style.color = theme.text;
     // add other style updates as needed
   }, [theme]);
+
     return (
+        <Link href='/star'>
+
         <Card
         isPressable
         isHoverable
-        {...pressProps}
             variant="bordered"
             style={{ border: `1px solid ${theme.toggleBorder}`, backgroundColor: theme.toggleBorder }}
             css={{ w: "100%", h: "400px" }}>
@@ -83,6 +79,8 @@ export const Card3 = () => {
                 </Row>
             </Card.Footer>
         </Card>
+        </Link>
+
     );
 };
 export default Card3;

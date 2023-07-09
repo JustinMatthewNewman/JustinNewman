@@ -4,6 +4,8 @@ import soccer from '../public/assets/soccer.webp';
 import { Card, Grid, Button } from "@nextui-org/react";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+import { useTheme } from '../contexts/ThemeContext';
+import { useEffect } from 'react';
 
 const star = () => {
   const redirectToGitHub = () => {
@@ -23,6 +25,15 @@ const star = () => {
     indicators: true,
     arrows: true,
   };
+
+  const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    // Here you need to update your styles based on the theme
+    document.body.style.backgroundColor = theme.body;
+    document.body.style.color = theme.text;
+    // add other style updates as needed
+  }, [theme]);
 
   return (
     <div className='w-full'>
@@ -47,7 +58,7 @@ const star = () => {
 
       
       <div className="container mx-auto max-w-2xl mt-8">
-        <Card shadow style={{ margin: "8px" }}>
+        <Card style={{ backgroundColor: `${theme.sidenav}`, color: `${theme.text}`, margin: "8px", border: 'none' }}>
           <div className="content p-8">
             <h2 className="text-2xl font-bold mb-4">SOFTWARE DEMO (Beta version render)</h2>
             <video className="w-screen" controls>
@@ -56,7 +67,7 @@ const star = () => {
             </video>
 
             <div className="flex justify-center p-4">
-              <Button primary ghost onClick={redirectToGitHub}>
+              <Button primary ghost className='shadow-none' onClick={redirectToGitHub}>
                 Open Source
               </Button>
             </div>
@@ -69,7 +80,7 @@ const star = () => {
         </Card>
         <div className="container mx-auto max-w-2xl mt-8">
 
-        <Card shadow style={{ margin: '8px' }}>
+        <Card shadow style={{ backgroundColor: `${theme.sidenav}`, color: `${theme.text}`, margin: "8px", border: 'none' }}>
       <div className="p-4">
         <h2 className="text-2xl font-bold mb-4">REAL statistics graphic renders</h2>
         <div className="mx-auto max-w-2xl">
@@ -91,18 +102,18 @@ const star = () => {
 
 
           <div className="flex justify-between mt-8">
-            <Card shadow style={{ margin: '8px' }}>
+            <Card shadow style={{ backgroundColor: `${theme.sidenav}`, color: `${theme.text}`, margin: "8px", border: 'none' }}>
 
               <div className="text-center p-4">
                 <img className="w-32 mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="HTML" />
               </div>
             </Card>
-            <Card shadow style={{ margin: '8px' }}>
+            <Card shadow style={{ backgroundColor: `${theme.sidenav}`, color: `${theme.text}`, margin: "8px", border: 'none' }}>
               <div className="text-center p-4">
                 <img className="w-32 mx-auto" src="https://classes.engineering.wustl.edu/cse231/core/images/2/26/Java.png" alt="Java" />
               </div>
             </Card>
-            <Card shadow style={{ margin: '8px' }}>
+            <Card shadow style={{ backgroundColor: `${theme.sidenav}`, color: `${theme.text}`, margin: "8px", border: 'none' }}>
               <div className="text-center p-4">
                 <img className="w-32 mx-auto" src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" alt="Python" />
               </div>
