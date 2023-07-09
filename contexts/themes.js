@@ -2,7 +2,7 @@
 
 export const lightTheme = {
     body: '#ededed',
-    text: '#000000',
+    text: '#1c1c1c',
     toggleBorder: '#f5f5f5',
     background: '#363537',
     nav: 'rgba(227, 227, 227, 0.5)',
