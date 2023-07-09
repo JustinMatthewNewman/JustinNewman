@@ -116,7 +116,7 @@ const Navbar = () => {
                 auto
                 ghost
                 className='shadow-none'
-                style={{ padding: '10px', backgroundColor: theme.body, color: theme.text }}
+                style={{ padding: '10px', backgroundColor: theme.body, color: theme.text, zIndex: 2 }}
               >
                 {theme === lightTheme ? <FaMoon /> : <FaSun />}
               </Button>
@@ -152,7 +152,7 @@ const Navbar = () => {
           }}
           className={
             nav
-              ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen p-10 ease-in duration-500 backdrop-filter backdrop-blur-sm'
+              ? 'fixed left-0 top-0 w-[100%] sm:w-[100%] md:w-[100%] h-screen p-10 ease-in duration-500 backdrop-filter backdrop-blur-sm'
               : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }
         >
