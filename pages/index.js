@@ -116,7 +116,7 @@ const Home = () => {
   const Skills = dynamic(() => import('../components/Skills'));
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr', gridTemplateRows: 'auto 1fr' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr', gridTemplateRows: 'auto 1fr', overflowX: 'hidden'}}>
       <Head>
         <title>Justin Newman</title>
         <meta name="description" content="I’m a human." />
