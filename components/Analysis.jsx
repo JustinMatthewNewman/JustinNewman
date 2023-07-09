@@ -69,7 +69,7 @@ const Analysis = () => {
                   <Card.Body>
                       <div className='flex items-center space-x-2'>
                           <FaFileAlt className='w-8 h-8 text-blue-600'/>
-                          <Text>{files[0]}</Text> <Text>(Resumé)</Text>
+                          <Text style={{ color: `${theme.text}` }}>{files[0]}</Text> <Text style={{ color: `${theme.text}` }}>(Resumé)</Text>
                       </div>
                   </Card.Body>
                 </a>
@@ -80,7 +80,7 @@ const Analysis = () => {
                     {files.slice(1).map((file, index) => (
                         <Collapse
                         key={index}
-                        title={<Text h4>{titles[index]}</Text>}
+                        title={<Text h4 style={{ color: `${theme.text}` }}>{titles[index]}</Text>}
                         subtitle={shortDescriptions[index]}
                         contentLeft={
                             <FaFileAlt className='w-8 h-8 text-blue-600'/>
@@ -90,7 +90,7 @@ const Analysis = () => {
                             
                           <Button ghost className="shadow-none" onClick={() => downloadFile(file)}>View</Button>
                           </div>
-                        <Text>{longDescriptions[index]}</Text>
+                        <Text style={{ color: `${theme.text}` }}>{longDescriptions[index]}</Text>
                       </Collapse>
                     ))}
                   </Collapse.Group>

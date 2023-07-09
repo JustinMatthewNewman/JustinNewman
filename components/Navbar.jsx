@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTheme } from '../contexts/ThemeContext';
 import React, { useState, useEffect } from 'react';
-import { AiOutlineClose,AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 import NavLogo from '../public/assets/navLogo.png'
 import NavLogoDark from '../public/assets/justin_white.png'
@@ -59,7 +59,13 @@ const Navbar = () => {
 
   return (
     <div
-      style={{ backgroundColor: `${theme.nav}` }}
+      style={{
+        backgroundColor: `${theme.nav}`,
+        backdropFilter: 'blur(25px)',
+        fontFamily: 'Ubuntu',
+        fontWeight: 'bold' // make it bold
+      }}
+
       className={
         shadow
           ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
@@ -79,7 +85,7 @@ const Navbar = () => {
           </a>
         </Link>
         <div>
-          <ul style={{ color: `${theme.text}` }} className='hidden md:flex'>
+          <ul style={{ color: `${theme.text}` }} className='hidden md:flex flex items-center'>
             <li className='ml-10 text-sm uppercase hover:text-white'>
               <Link href='/'>Home</Link>
             </li>
@@ -87,8 +93,8 @@ const Navbar = () => {
               <Link href='/about'>About</Link>
             </li>
             {/* <li className='ml-10 text-sm uppercase hover:text-white'>
-              <Link href='/#skills'>Skills</Link>
-            </li> */}
+            <Link href='/#skills'>Skills</Link>
+          </li> */}
             <li className='ml-10 text-sm uppercase hover:text-white'>
               <Link href='/projects'>Projects</Link>
             </li>
@@ -96,22 +102,39 @@ const Navbar = () => {
               <Link href='/resume'>Resume</Link>
             </li>
             <li className='ml-10'>
-              <Button color={theme.nav} onClick={toggleTheme} auto ghost className="shadow-none" style={{ padding: '10px', backgroundColor: theme.body, color: theme.text,  }}>
+              <Button color={theme.nav} onClick={toggleTheme} auto ghost className="shadow-none" style={{ padding: '10px', backgroundColor: theme.body, color: theme.text }}>
                 {theme === lightTheme ? <FaMoon /> : <FaSun />}
               </Button>
             </li>
             {/* <li className='ml-10 text-sm uppercase hover:text-white'>
-              <Link href='/#contact'>Contact</Link>
-            </li> */}
+            <Link href='/#contact'>Contact</Link>
+          </li> */}
           </ul>
-          {/* Hamburger Icon */}
-          <div
-            style={{ color: `${linkColor}` }}
-            onClick={handleNav}
-            className='md:hidden'
-          >
-            <AiOutlineMenu size={25} />
-          </div>
+          <ul className='flex items-center px-4'>
+            <li className='md:hidden px-4'>
+              <Button
+                color={theme.nav}
+                onClick={toggleTheme}
+                auto
+                ghost
+                className='shadow-none'
+                style={{ padding: '10px', backgroundColor: theme.body, color: theme.text }}
+              >
+                {theme === lightTheme ? <FaMoon /> : <FaSun />}
+              </Button>
+            </li>
+            {/* Hamburger Icon */}
+            <li>
+              <div
+                style={{ color: `${theme.text}` }}
+                onClick={handleNav}
+                className='md:hidden'
+              >
+                <AiOutlineMenu size={25} />
+              </div>
+            </li>
+          </ul>
+
         </div>
       </div>
 
@@ -124,10 +147,14 @@ const Navbar = () => {
       >
         {/* Side Drawer Menu */}
         <div
-        style={{ backgroundColor: `${theme.nav}` }}
+          style={{
+            backgroundColor: `${theme.sidenav}`,
+            fontFamily: 'Ubuntu',
+            fontWeight: 'bold',
+          }}
           className={
             nav
-              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+              ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen p-10 ease-in duration-500 backdrop-filter backdrop-blur-sm'
               : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }
         >
@@ -136,7 +163,7 @@ const Navbar = () => {
               <Link href='/'>
                 <a>
                   <Image
-                    src={NavLogo}
+                    src={theme === lightTheme ? NavLogo : NavLogoDark}
                     width='87'
                     height='35'
                     alt='/'
@@ -183,11 +210,7 @@ const Navbar = () => {
                   Resume
                 </li>
               </Link>
-              <li className=''>
-              <Button color={theme.nav} onClick={toggleTheme} auto ghost className="shadow-none" style={{ padding: '10px', backgroundColor: theme.body, color: theme.text,  }}>
-                {theme === lightTheme ? <FaMoon /> : <FaSun />}
-              </Button>
-            </li>
+
               {/* <Link href='/#contact'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   Contact
