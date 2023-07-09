@@ -22,16 +22,20 @@ const FloatingText = React.memo(() => {
       <TypeAnimation
   sequence={[
     // Same substring at the start will only be typed once, initially
-    'Hi, welcome to my website!',
+    'Design.',
     1000,
-    'My name is Justin Newman.',
+    'Build.',
     1000,
-    'I would love to hear from you!',
+    'Optimize.',
+    1000,
+    'Refine.',
+    1000,
+    'Deploy.',
     1000,
     
   ]}
   speed={50}
-  style={{ fontSize: '1em' }}
+  style={{ fontSize: '3rem', fontWeight: '700', fontFamily: 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji'}}
   repeat={Infinity}
 />
     </div>
