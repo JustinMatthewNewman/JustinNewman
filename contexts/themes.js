@@ -6,7 +6,9 @@ export const lightTheme = {
     toggleBorder: '#FFF',
     background: '#363537',
     nav: '#FFF',
-    logo: 'justin.png'
+    logo: 'justin.png',
+    line_baseColor: '#ecc7fc',
+    line_gradColor: 'lightblue',
   };
   
   export const darkTheme = {
@@ -15,6 +17,8 @@ export const lightTheme = {
     toggleBorder: '#6B8096',
     background: '#999',
     nav: '#404040',
-    logo: 'justin_white.png'
+    logo: 'justin_white.png',
+    line_gradColor: '#73c7f5',
+    line_baseColor: '#98cceb',
   };
   

@@ -3,12 +3,13 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-
-const baseColor = new THREE.Color(0xecc7fc);
-const gradient = new THREE.Color("lightblue");
+import { lightTheme, darkTheme } from '../contexts/themes';
+import { useTheme } from '../contexts/ThemeContext';
 
 const WavyLines = () => {
+  const { theme, toggleTheme } = useTheme();
   const lineRefs = useRef([]);
+  const shaderMaterialRef = useRef();
   const [scrollY, setScrollY] = useState(0);
   const [targetRotation, setTargetRotation] = useState(0);
 
@@ -40,6 +41,15 @@ const WavyLines = () => {
     setTargetRotation(scrollY * 0.001);
   }, [scrollY]);
 
+  useEffect(() => {
+    document.body.style.backgroundColor = theme.body;
+    document.body.style.color = theme.text;
+    if (shaderMaterialRef.current) {
+      shaderMaterialRef.current.uniforms.baseColor.value = new THREE.Color(theme.line_baseColor || 0xecc7fc);
+      shaderMaterialRef.current.uniforms.gradient.value = new THREE.Color(theme.line_gradColor || "lightblue");
+    }
+  }, [theme]);
+
   const lineThickness = 2;
 
   const shaderMaterial = useMemo(
@@ -64,13 +74,14 @@ const WavyLines = () => {
           }
         `,
         uniforms: {
-          gradient: { value: gradient },
-          baseColor: { value: baseColor },
+          gradient: { value: new THREE.Color(theme.line_gradColor || "lightblue") },
+          baseColor: { value: new THREE.Color(theme.line_baseColor || 0xecc7fc) },
         },
         linewidth: lineThickness,
       }),
     []
   );
+  shaderMaterialRef.current = shaderMaterial;
 
   const lines = useMemo(
     () =>
