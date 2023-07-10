@@ -132,7 +132,8 @@ const Navbar = () => {
                 className='md:hidden'
                 style={{ color: `${theme.text}` }}
               >
-                <AiOutlineMenu size={25} />
+                {nav === false ? <AiOutlineMenu size={15} /> : <AiOutlineClose size={15}/>}
+
               </div>
               </Button>
               
@@ -152,9 +153,10 @@ const Navbar = () => {
         {/* Side Drawer Menu */}
         <div
           style={{
-            fontFamily: 'Ubuntu',
-            fontWeight: 'bold',
-            color: "white"
+            fontFamily: 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
+            fontWeight: '700',
+            color: "white",
+            fontSize: '1.6rem'
           }}
           className={
             nav
@@ -174,28 +176,33 @@ const Navbar = () => {
                   />
                 </a>
               </Link> */}
-              <div
+                          {/* <Button
+                color={theme.nav}
                 onClick={handleNav}
-                className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'
+                auto
+                ghost
+                className='shadow-none md:hidden'
+                style={{ padding: '10px', backgroundColor: theme.body, color: theme.text, zIndex: 2 }}
               >
-                <AiOutlineClose />
-              </div>
+              <AiOutlineClose />
+
+              </Button> */}
             </div>
             <div className='border-b border-gray-300 my-4'>
               <p className='w-[85%] md:w-[90%] py-4'>
-                Let&#39;s build something legendary together
+                Justin Newman | Metalinguist LLC
               </p>
             </div>
           </div>
           <div className='py-4 flex flex-col'>
-            <ul className='uppercase'>
+            <ul className='uppercase '>
               <Link href='/'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <li onClick={() => setNav(false)} className='py-4 text-md'>
                   Home
                 </li>
               </Link>
               <Link href='/about'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <li onClick={() => setNav(false)} className='py-4 text-md'>
                   About
                 </li>
               </Link>
@@ -205,12 +212,12 @@ const Navbar = () => {
                 </li>
               </Link> */}
               <Link href='/projects'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <li onClick={() => setNav(false)} className='py-4 text-md'>
                   Projects
                 </li>
               </Link>
               <Link href='/resume'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <li onClick={() => setNav(false)} className='py-4 text-md'>
                   Resume
                 </li>
               </Link>
@@ -220,10 +227,10 @@ const Navbar = () => {
                   Contact
                 </li>
               </Link> */}
-            </ul>
-            <div className='pt-40'>
+            </ul >
+            <div className='pt-4'>
               <p className='uppercase tracking-widest text-[#5651e5]'>
-                Let&#39;s Connect
+                Linkedin
               </p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                 <a
