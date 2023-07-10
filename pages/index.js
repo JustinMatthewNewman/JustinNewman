@@ -38,7 +38,7 @@ const WavyLines = () => {
   }, []);
 
   useEffect(() => {
-    setTargetRotation(scrollY * 0.001);
+    setTargetRotation(scrollY * 0.0007);
   }, [scrollY]);
 
   useEffect(() => {
@@ -91,7 +91,7 @@ const WavyLines = () => {
         for (let i = 0; i < 200; i++) {
           const x = i / 10;
           const y = Math.sin(i / 25);
-          points.push(new THREE.Vector3(x - 10, y - 1, 0));
+          points.push(new THREE.Vector3(x - 10, y, 0));
         }
         geometry.setFromPoints(points);
         geometry.rotateZ(0.4);

@@ -27,7 +27,7 @@ export const lightTheme = {
     nav: 'rgba(36, 36, 36, 0.7)',
     sidenav: 'rgb(36, 36, 36)',
     logo: 'justin_white.png',
-    line_gradColor: '#73c7f5',
+    line_gradColor: '#1250a1',
     line_baseColor: '#98cceb',
     card_border: "#333333",
     foodCardImg: "food_dark.webp",
