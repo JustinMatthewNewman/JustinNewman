@@ -36,7 +36,7 @@ export const Card3 = () => {
             </Card.Header>
             <Card.Body css={{ p: 0 }}>
                 <Card.Image
-                    src="assets/projects/camera.webp"
+                    src={`assets/projects/${theme.starImg}`}
                     width="100%"
                     height="100%"
                     objectFit="cover"

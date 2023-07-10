@@ -32,7 +32,7 @@ export const Card1 = () => {
             css={{ w: "100%", h: "400px" }}>
             <Card.Body css={{ p: 0 }}>
                 <Card.Image
-                    src="assets/projects/melodifylabs.webp"
+                    src={`assets/projects/${theme.melodifyImg}`}
                     width="100%"
                     height="100%"
                     objectFit="cover"

@@ -17,6 +17,9 @@ export const lightTheme = {
     webDevImg: "weddev_light.webp",
     webDevImg2: "webdev_light.webp",
     docsImg: "mac.webp",
+    cscodeImg: "cscode_light.webp",
+    melodifyImg: "melodifylabs.webp",
+    starImg: "star_light.webp",
   };
   
   export const darkTheme = {
@@ -36,6 +39,9 @@ export const lightTheme = {
     webDevImg: "webdev.webp",
     webDevImg2: "webdev_dark.webp",
     docsImg: "analysis_dark.webp",
+    cscodeImg: "iphone.webp",
+    melodifyImg: "melodify_dark.webp",
+    starImg: "camera.webp",
 
   };
   
