@@ -5,11 +5,11 @@ import { Card, Col, Row, Text } from "@nextui-org/react";
 import { usePress } from "react-aria";
 import { lightTheme, darkTheme } from '../contexts/themes';
 import { useTheme } from '../contexts/ThemeContext';
-export const Card5 = () => {
+export const Card6 = () => {
     const { pressProps, isPressed } = usePress({
         onPress: () => {
             // Handle the press event here
-            window.location.href = "https://w3stu.cs.jmu.edu/newma4jm/website/index.html";
+            window.location.href = "https://observablehq.com/@justinmatthewnewman?tab=profile";
         }
     });
     const { theme, toggleTheme } = useTheme();
@@ -31,7 +31,7 @@ export const Card5 = () => {
         >
             <Card.Body css={{ p: 0 }}>
                 <Card.Image
-                    src={`/assets/${theme.webDevImg2}`}
+                    src={`/assets/projects/${theme.webDevImg}`}
                     objectFit="cover"
                     width="100%"
                     height="100%"
@@ -54,10 +54,10 @@ export const Card5 = () => {
                             <Col span={3}></Col>
                             <Col>
                                 <Text style={{ color: `${theme.text}` }} size={12}>
-                                    JMU WebDev Club
+                                Observable Notebooks
                                 </Text>
                                 <Text style={{ color: `${theme.text}` }} size={12}>
-                                    A coding collective.
+                                    Data Visualization.
                                 </Text>
                             </Col>
                         </Row>
@@ -73,4 +73,4 @@ export const Card5 = () => {
     );
 };
 
-export default Card5;
+export default Card6;

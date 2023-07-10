@@ -7,7 +7,7 @@ import { Card2 } from './Card2';
 import { Card3 } from './Card3';
 import { Card4 } from './Card4';
 import { Card5 } from './Card5';
-
+import { Card6 } from './Card6';
 const Projects = () => {
   return (
     <div id='projects' className='w-full'>
@@ -15,15 +15,20 @@ const Projects = () => {
        
         <div >
           <Grid.Container gap={2} justify="center">
-            <Grid xs={12} sm={4}>
+         
+            <Grid xs={12} sm={7}>
               <Card1 />
             </Grid>
-            <Grid xs={12} sm={4}>
+            <Grid xs={12} sm={5}>
               <Card2 />
             </Grid>
-            <Grid xs={12} sm={4}>
+            <Grid xs={12} sm={6}>
               <Card3 />
             </Grid>
+            <Grid xs={12} sm={6}>
+              <Card6 />
+            </Grid>
+
             <Grid xs={12} sm={5}>
               <Card4 />
             </Grid>

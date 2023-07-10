@@ -15,6 +15,7 @@ export const lightTheme = {
     travCardImg: "travel_light.webp",
     footerBlur: '#ffffff66',
     webDevImg: "weddev_light.webp",
+    webDevImg2: "webdev_light.webp",
     docsImg: "mac.webp",
   };
   
@@ -33,6 +34,7 @@ export const lightTheme = {
     travCardImg: "travel.webp",
     footerBlur: '#0f111466',
     webDevImg: "webdev.webp",
+    webDevImg2: "webdev_dark.webp",
     docsImg: "analysis_dark.webp",
 
   };
