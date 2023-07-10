@@ -64,11 +64,8 @@ const Navbar = () => {
         fontWeight: 'bold' // make it bold
       }}
 
-      className={
-        shadow
-          ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
-          : 'fixed w-full h-20 z-[100]'
-      }
+      className={`${shadow ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300' : 'fixed w-full h-20 z-[100]'} backdrop-blur-sm`}
+
     >
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <Link href='/'>
@@ -122,14 +119,23 @@ const Navbar = () => {
               </Button>
             </li>
             {/* Hamburger Icon */}
-            <li>
-              <div
-                style={{ color: `${theme.text}` }}
+            <li className='md:hidden px-4'>
+            <Button
+                color={theme.nav}
                 onClick={handleNav}
+                auto
+                ghost
+                className='shadow-none md:hidden'
+                style={{ padding: '10px', backgroundColor: theme.body, color: theme.text, zIndex: 2 }}
+              >
+                <div
                 className='md:hidden'
+                style={{ color: `${theme.text}` }}
               >
                 <AiOutlineMenu size={25} />
               </div>
+              </Button>
+              
             </li>
           </ul>
 
