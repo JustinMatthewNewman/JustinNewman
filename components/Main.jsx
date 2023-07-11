@@ -12,8 +12,11 @@ const FloatingText = React.memo(() => {
     transition: 'transform 0.3s',
     fontSize: '2em',
     zIndex: 3,
-    animation: 'fade-in 4s'  // 2s is the duration of the animation
+    animation: 'fade-in 4s', // 2s is the duration of the animation
+  
+   
   };
+  
 
   return (
     <div
@@ -35,7 +38,8 @@ const FloatingText = React.memo(() => {
     
   ]}
   speed={50}
-  style={{ fontSize: '3rem', fontWeight: '700', fontFamily: 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji'}}
+  style={{ fontSize: '5rem', fontWeight: '700', 
+  fontFamily: 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji'}}
   repeat={Infinity}
 />
     </div>

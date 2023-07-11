@@ -17,6 +17,9 @@ const Skills = () => {
   }, [theme]);
   return (
     <div id='skills' className='w-full p-4 flex justify-center'>
+      <div className='max-w-[1240px] mx-auto px-2 py-16 pt-32 flex flex-col items-center'>
+        <div className="font-montserrat font-bold w-full">
+
       <Grid.Container gap={2} justify="center" >
       <Grid style={{zIndex: 2}}>
         <Collapse.Group shadow style={{ backgroundColor: `${theme.sidenav}`, color: `${theme.text}`,  }}>
@@ -91,6 +94,8 @@ const Skills = () => {
         </Collapse.Group>
       </Grid>
     </Grid.Container>
+        </div>    
+    </div>
     </div>
   );
 };

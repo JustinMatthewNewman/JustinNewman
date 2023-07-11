@@ -38,7 +38,7 @@ const WavyLines = () => {
   }, []);
 
   useEffect(() => {
-    setTargetRotation(scrollY * 0.0007);
+    setTargetRotation(scrollY * 0.000666);
   }, [scrollY]);
 
   useEffect(() => {
