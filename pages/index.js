@@ -118,7 +118,7 @@ const Home = () => {
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gridTemplateRows: 'auto 1fr', overflowX: 'hidden'}}>
       <Head>
-        <title>Justin Newman | Jr. Software Engineer | Metalinguist LLC | JMU Computer Science | Virginia</title>
+        <title>Justin M. Newman | Jr. Software Engineer | Metalinguist LLC | JMU Computer Science | Virginia</title>
         <meta name="description" content="I’m a human." />
         <link rel="icon" href="/fav.png" />
       </Head>
