@@ -1,0 +1,276 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { useTheme } from '../contexts/ThemeContext';
+import React, { useState, useEffect } from 'react';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { FaLinkedinIn } from 'react-icons/fa';
+import NavLogo from '../public/assets/navLogo.png'
+import NavLogoDark from '../public/assets/justin_white.png'
+import { FaSun, FaMoon } from 'react-icons/fa';
+import { lightTheme, darkTheme } from '../contexts/themes';
+import { Button } from "@nextui-org/react";
+
+
+const Navbar = () => {
+  const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    // Here you need to update your styles based on the theme
+    document.body.style.backgroundColor = theme.body;
+    document.body.style.color = theme.text;
+    // add other style updates as needed
+  }, [theme]);
+  // const [position, setPosition] = useState('fixed')
+  // const router = useRouter();
+
+  // useEffect(() => {
+  //   if (
+  //     router.asPath === '/property' ||
+  //     router.asPath === '/crypto' ||
+  //     router.asPath === '/netflix' ||
+  //     router.asPath === '/twitch'
+  //   ) {
+  //     setNavBg('transparent');
+  //     setLinkColor('#ecf0f3');
+  //   } else {
+  //     setNavBg('#ecf0f3');
+  //     setLinkColor('#1f2937');
+  //   }
+  // }, [router]);
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener('scroll', handleShadow);
+  }, []);
+
+  return (
+    <div
+      style={{
+        backgroundColor: `${theme.nav}`,
+        backdropFilter: 'blur(25px)',
+        fontFamily: 'Ubuntu',
+        fontWeight: 'bold' // make it bold
+      }}
+
+      className={`${shadow ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300' : 'fixed w-full h-20 z-[100]'} backdrop-blur-sm`}
+
+    >
+      <div className='flex justify-between items-center w-full h-full px-2 px-16'>
+        <Link href='/'>
+            <Image
+              src={theme === lightTheme ? NavLogo : NavLogoDark}
+              alt='/'
+              width='125'
+              height='50'
+              className='cursor-pointer'
+            />
+        </Link>
+        <div>
+          <ul style={{ color: `${theme.text}` }} className='hidden lg:flex flex items-center'>
+            <li className='ml-10 text-sm uppercase hover:text-white'>
+              <Link href='/'>Home</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:text-white'>
+              <Link href='/about'>About</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:text-white'>
+              <Link href='/math'>Math</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:text-white'>
+              <Link href='/science'>Science</Link>
+            </li>
+            {/* <li className='ml-10 text-sm uppercase hover:text-white'>
+              <Link href='/datavisualization'>Data Visualization</Link>
+            </li> */}
+            {/* <li className='ml-10 text-sm uppercase hover:text-white'>
+            <Link href='/#skills'>Skills</Link>
+          </li> */}
+            <li className='ml-10 text-sm uppercase hover:text-white'>
+              <Link href='/projects'>Apps</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:text-white'>
+              <Link href='/more'>More</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:text-white'>
+              <Link href='/resume'>Resume</Link>
+            </li>
+            <li className='ml-10'>
+              <Button color={theme.nav} onClick={toggleTheme} auto ghost className="shadow-none" style={{ padding: '10px', backgroundColor: theme.body, color: theme.text }}>
+                {theme === lightTheme ? <FaMoon /> : <FaSun />}
+              </Button>
+            </li>
+            {/* <li className='ml-10 text-sm uppercase hover:text-white'>
+            <Link href='/#contact'>Contact</Link>
+          </li> */}
+          </ul>
+          <ul className='flex items-center px-4'>
+            <li className='lg:hidden px-4'>
+              <Button
+                color={theme.nav}
+                onClick={toggleTheme}
+                auto
+                ghost
+                className='shadow-none'
+                style={{ padding: '10px', backgroundColor: theme.body, color: theme.text, zIndex: 2 }}
+              >
+                {theme === lightTheme ? <FaMoon /> : <FaSun />}
+              </Button>
+            </li>
+            {/* Hamburger Icon */}
+            <li className='lg:hidden px-4'>
+            <Button
+                color={theme.nav}
+                onClick={handleNav}
+                auto
+                ghost
+                className='shadow-none lg:hidden'
+                style={{ padding: '10px', backgroundColor: theme.body, color: theme.text, zIndex: 2 }}
+              >
+                <div
+                className='lg:hidden'
+                style={{ color: `${theme.text}` }}
+              >
+                {nav === false ? <AiOutlineMenu size={15} /> : <AiOutlineClose size={15}/>}
+
+              </div>
+              </Button>
+              
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {/* Overlay */}
+      <div
+        className={
+          nav ? 'lg:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''
+        }
+      >
+        {/* Side Drawer Menu */}
+        <div
+          style={{
+            fontFamily: 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
+            fontWeight: '700',
+            color: "white",
+            fontSize: '1.6rem'
+          }}
+          className={
+            nav
+            ? 'fixed left-0 top-0 w-[100%] lg:w-[100%] h-screen p-10 ease-in duration-500 backdrop-filter backdrop-blur-sm'
+            : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
+          }
+        >
+          <div >
+            <div className='flex w-full items-center justify-between'>
+              {/* <Link href='/'>
+                <a>
+                  <Image
+                    src={theme === lightTheme ? NavLogo : NavLogoDark}
+                    width='87'
+                    height='35'
+                    alt='/'
+                  />
+                </a>
+              </Link> */}
+                          {/* <Button
+                color={theme.nav}
+                onClick={handleNav}
+                auto
+                ghost
+                className='shadow-none md:hidden'
+                style={{ padding: '10px', backgroundColor: theme.body, color: theme.text, zIndex: 2 }}
+              >
+              <AiOutlineClose />
+
+              </Button> */}
+            </div>
+            <div className='border-b border-gray-300 my-4'>
+              <p className='w-[85%] md:w-[90%] py-4'>
+                Justin Newman
+              </p>
+            </div>
+          </div>
+          <div className='py-4 max-h-[80vh] overflow-y-auto scrollbar-hide'>
+            <ul className='uppercase '>
+              <Link href='/'>
+                <li onClick={() => setNav(false)} className='py-4 text-md'>
+                  Home
+                </li>
+              </Link>
+              <Link href='/about'>
+                <li onClick={() => setNav(false)} className='py-4 text-md'>
+                  About
+                </li>
+              </Link>
+              <Link href='/math'>
+                <li onClick={() => setNav(false)} className='py-4 text-md'>
+                  Math
+                </li>
+              </Link>
+              <Link href='/science'>
+                <li onClick={() => setNav(false)} className='py-4 text-md'>
+                  Science
+                </li>
+              </Link>
+              {/* <Link href='/datavisualization'>
+                <li onClick={() => setNav(false)} className='py-4 text-md'>
+                  Data Visualization
+                </li>
+              </Link> */}
+              {/* <Link href='/#skills'>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  Skills
+                </li>
+              </Link> */}
+              <Link href='/projects'>
+                <li onClick={() => setNav(false)} className='py-4 text-md'>
+                  Apps
+                </li>
+              </Link>
+              <Link href='/more'>
+                <li onClick={() => setNav(false)} className='py-4 text-md'>
+                  More
+                </li>
+              </Link>
+              <Link href='/resume'>
+                <li onClick={() => setNav(false)} className='py-4 text-md'>
+                  Resume
+                </li>
+              </Link>
+
+              {/* <Link href='/#contact'>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  Contact
+                </li>
+              </Link> */}
+            </ul >
+            <div className='pt-4 py-10'>
+              <Link href="https://www.linkedin.com/in/justin-newman-15650b185/">
+              <p className='uppercase tracking-widest text-[#5651e5]'>
+                Linkedin
+              </p>
+              </Link>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

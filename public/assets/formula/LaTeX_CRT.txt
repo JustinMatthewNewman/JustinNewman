@@ -1,0 +1,9 @@
+\bar{x}=\sum_{i=1}^{k}(a_{i} \times Z_{i} )mod \ M
+
+a_{i}=c^{d} \ mod \ n_{i}
+
+Z_{i}=m_{i} \times Y_{i}
+
+m_{i} = \frac{M}{n_{i}}
+
+Y_{i}=m_{i}^{-1} \ mod \ n_{i}
