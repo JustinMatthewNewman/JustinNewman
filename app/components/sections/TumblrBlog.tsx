@@ -1,8 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import Link from "next/link";
-import { HiArrowSmLeft } from "react-icons/hi";
+import { useEffect, useState } from "react";
 
 const iframeStyle = {
   width: '100%',
@@ -12,8 +10,12 @@ const iframeStyle = {
 };
 
 export default function TumblrBlog() {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
-
+  if (!mounted) return null
   return (
     <div>
       <iframe
