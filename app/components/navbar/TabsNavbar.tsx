@@ -92,7 +92,7 @@ export default function TabsNavbar() {
       </NavbarContent>
       <NavbarContent className="hidden lg:flex gap-4">
         <NavbarBrand>
-          <Link color="foreground" href="/home">
+          <Link color="foreground" href="/">
             <Logo />
           </Link>
         </NavbarBrand>
