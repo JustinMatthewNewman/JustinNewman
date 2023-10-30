@@ -29,7 +29,7 @@ export default function AboutCards() {
       title: "Inspire",
       img: blog,
       price: "Image Blog",
-      href: '/',
+      href: '/about/tumblr',
     },
     {
       title: "More",
