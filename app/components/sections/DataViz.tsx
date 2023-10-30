@@ -90,7 +90,7 @@ function DataViz() {
 
             {/* EMBED YOUTUBE VIDEO HERE */}
             <div className="video-container">
-              <Link href="/usacars" target="_blank" style={{ cursor: "pointer" }}>
+              <Link href="https://observablehq.com/@justinmatthewnewman" target="_blank" style={{ cursor: "pointer" }}>
                 <Image
                   style={{ padding: "12px", cursor: "pointer" }}
                   src={secure}
