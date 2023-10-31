@@ -9,7 +9,6 @@ const iframeStyle = {
   backgroundColor: 'transparent',
   colorScheme: "normal",
   overflow: 'auto',
-  marginTop: -6
 };
 
 const centerStyle = {
@@ -38,13 +37,12 @@ export default function TumblrBlog() {
           <div className="container">
       <h2
         style={{
-          marginLeft: "12px",
           fontSize: "3rem",
           fontWeight: "700",
           fontFamily:
           "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
         }}
-        className="leading-tight"
+        className="leading-tight text-center"
         >
         Inspire...
       </h2>
