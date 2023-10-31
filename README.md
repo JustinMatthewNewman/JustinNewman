@@ -1,6 +1,6 @@
-# Portfolio for Justin Matthew Newman
+# Portfolio of Justin Matthew Newman
 
-Welcome to the portfolio of Justin Matthew Newman! This project serves as a showcase of my work and is freely available for use and modification. Your credit is greatly appreciated if you find this resource helpful.
+I created this app using Next js 14, Vercel Hosting, and NextUI 2.0. This project serves as a showcase of my work and is freely available for use and modification. Credit is greatly appreciated if you find this resource helpful.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
