@@ -1,4 +1,4 @@
-#Portfolio for Justin Matthew Newman
+# Portfolio for Justin Matthew Newman
 
 Welcome to the portfolio of Justin Matthew Newman! This project serves as a showcase of my work and is freely available for use and modification. Your credit is greatly appreciated if you find this resource helpful.
 
