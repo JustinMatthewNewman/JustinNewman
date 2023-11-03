@@ -4,7 +4,9 @@ import React from "react";
 function AmazonCard() {
   return (
     <div>
-      <Card className="mt-6">
+              <Card className="mt-6 p-2" style={{ backgroundImage: 'linear-gradient(40deg, rgba(112,112,112,1) 0%, rgba(226,226,226,1) 35%, rgba(120,120,120,1) 52%, rgba(255,255,255,1) 69%, rgba(33,33,33,1) 100%)'}}>
+
+      <Card>
         <CardHeader className="flex gap-3">
           <div className="flex flex-col  ">
             <p className="text-md">
@@ -52,6 +54,7 @@ function AmazonCard() {
             shaped me into a more empathetic, hardworking, and proactive person.
           </p>
         </CardBody>
+      </Card>
       </Card>
     </div>
   );

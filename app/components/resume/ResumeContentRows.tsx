@@ -12,6 +12,8 @@ import ChefCard from "./ChefCard";
 export default function ResumeContentRows() {
   return (
     <div>
+            <Card className="mt-6 p-2" style={{ backgroundImage: 'linear-gradient(0deg, rgba(166,126,23,1) 0%, rgba(255,238,205,1) 35%, rgba(255,230,176,1) 52%, rgba(255,255,255,1) 69%, rgba(161,134,34,1) 100%)'}}>
+
       <Card>
         <CardHeader className="flex gap-3">
           <div className="flex flex-col">
@@ -33,8 +35,9 @@ export default function ResumeContentRows() {
           </p>
         </CardBody>
       </Card>
-
-      <Card className="mt-6">
+      </Card>
+      <Card className="mt-6 p-2" style={{ backgroundImage: 'linear-gradient(0deg, rgba(166,126,23,1) 0%, rgba(255,238,205,1) 35%, rgba(255,230,176,1) 52%, rgba(255,255,255,1) 69%, rgba(161,134,34,1) 100%)'}}>
+      <Card>
         <CardHeader className="flex gap-3">
           <div className="flex flex-col">
             <p className="text-md">AGILE DEVELOPMENT EXPERIENCE</p>
@@ -82,8 +85,9 @@ export default function ResumeContentRows() {
           </ul>
         </CardBody>
       </Card>
-
-      <Card className="mt-6">
+      </Card>
+      <Card className="mt-6 p-2" style={{ backgroundImage: 'linear-gradient(0deg, rgba(166,126,23,1) 0%, rgba(255,238,205,1) 35%, rgba(255,230,176,1) 52%, rgba(255,255,255,1) 69%, rgba(161,134,34,1) 100%)'}}>
+      <Card>
         <CardHeader className="flex gap-3">
           <div className="flex flex-col  ">
             <p className="text-md">
@@ -127,6 +131,7 @@ export default function ResumeContentRows() {
             </li>
           </ul>
         </CardBody>
+      </Card>
       </Card>
 
       <AmazonCard/>

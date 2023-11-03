@@ -1,10 +1,10 @@
 import { Card, CardBody, CardHeader, Divider } from '@nextui-org/react'
 import React from 'react'
 import CheckBoxRow from '../extras/checkboxrow/CheckBoxRow'
-
 function LifeCard() {
   return (
     <div>
+
         <Card className="mt-6">
         <CardHeader className="flex gap-3">
           <div className="flex flex-col  ">
