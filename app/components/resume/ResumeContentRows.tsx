@@ -3,6 +3,10 @@ import React from "react";
 import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
 import CheckBoxRow from "../extras/checkboxrow/CheckBoxRow";
 import CheckBoxRowMeta from "../extras/checkboxrow/CheckBoxRowMeta";
+import AmazonCard from "./AmazonCard";
+import MassCard from "./MassCard";
+import ChefCard from "./ChefCard";
+// import LifeCard from "./LifeCard";
 
 
 export default function ResumeContentRows() {
@@ -124,6 +128,11 @@ export default function ResumeContentRows() {
           </ul>
         </CardBody>
       </Card>
+
+      <AmazonCard/>
+      <MassCard/>
+      <ChefCard/>
+      {/* <LifeCard/> */}
     </div>
   );
 }
