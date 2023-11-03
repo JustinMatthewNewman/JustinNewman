@@ -1,6 +1,5 @@
 'use client'
 
-import light from "../../../public/images/background/background.png";
 import dark from "../../../public/images/background/dark-background.png";
 
 
@@ -14,7 +13,7 @@ function BackgroundImage() {
 
   switch (resolvedTheme) {
     case 'light':
-      bgImg = light;
+      bgImg = '';
       break;
     case 'dark':
       bgImg = dark;
