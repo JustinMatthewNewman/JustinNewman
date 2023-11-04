@@ -4,8 +4,7 @@ function ResumeContentTwoColumn() {
   return (
     <div>
       <div className="flex flex-col md:flex-row items-center justify-center mt-6 gap-6 ">
-      <Card className="max-w-[770px] mt-6 p-2" style={{ backgroundImage: 'linear-gradient(0deg, rgba(166,126,23,1) 0%, rgba(255,238,205,1) 35%, rgba(255,230,176,1) 52%, rgba(255,255,255,1) 69%, rgba(161,134,34,1) 100%)'}}>
-        <Card >
+        <Card className="max-w-[770px]">
           <CardHeader className="flex gap-3">
             <div className="flex flex-col">
               <p className="text-md">SKILLS</p>
@@ -64,9 +63,7 @@ function ResumeContentTwoColumn() {
             <p>Dean&apos;s List.</p>
           </CardBody>
         </Card>
-        </Card>
-        <Card className="mt-6 p-2 max-w-[430px]" style={{ backgroundImage: 'linear-gradient(0deg, rgba(166,126,23,1) 0%, rgba(255,238,205,1) 35%, rgba(255,230,176,1) 52%, rgba(255,255,255,1) 69%, rgba(161,134,34,1) 100%)'}}>
-        <Card className="">
+        <Card className="max-w-[430px]">
 
           <CardHeader className="flex gap-3">
             <div className="flex flex-col">
@@ -104,7 +101,6 @@ function ResumeContentTwoColumn() {
               and data visualization.
             </p>
           </CardBody>
-        </Card>
         </Card>
       </div>
     </div>

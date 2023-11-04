@@ -38,7 +38,7 @@ function LifeCard() {
 
           <ul className="p-4">
             <li className="mt-1 mb-1">
-              ✰ Developed an automated open source ESPN-Inspired Athletic
+              * Developed an automated open source ESPN-Inspired Athletic
               Statistical Graphics Rendering software that gathers individual
               player data for each athlete and generates ESPN-style
               informational graphics. Leveraged Java and Jsoup library,

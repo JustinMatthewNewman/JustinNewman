@@ -4,14 +4,7 @@ import React from "react";
 function MassCard() {
   return (
     <div>
-      <Card
-        className="mt-6 p-2"
-        style={{
-          backgroundImage:
-            "linear-gradient(103deg, rgba(184,92,0,1) 0%, rgba(255,209,163,1) 35%, rgba(222,114,47,1) 52%, rgba(255,231,213,1) 69%, rgba(161,75,0,1) 100%)",
-        }}
-      >
-        <Card>
+        <Card className="mt-6">
           <CardHeader className="flex gap-3">
             <div className="flex flex-col  ">
               <p className="text-small text-default-500 items-left">
@@ -45,7 +38,6 @@ function MassCard() {
             </p>
           </CardBody>
         </Card>
-      </Card>
     </div>
   );
 }

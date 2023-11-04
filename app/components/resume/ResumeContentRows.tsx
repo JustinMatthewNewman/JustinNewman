@@ -12,8 +12,6 @@ import ChefCard from "./ChefCard";
 export default function ResumeContentRows() {
   return (
     <div>
-            <Card className="mt-6 p-2" style={{ backgroundImage: 'linear-gradient(0deg, rgba(166,126,23,1) 0%, rgba(255,238,205,1) 35%, rgba(255,230,176,1) 52%, rgba(255,255,255,1) 69%, rgba(161,134,34,1) 100%)'}}>
-
       <Card>
         <CardHeader className="flex gap-3">
           <div className="flex flex-col">
@@ -35,9 +33,8 @@ export default function ResumeContentRows() {
           </p>
         </CardBody>
       </Card>
-      </Card>
-      <Card className="mt-6 p-2" style={{ backgroundImage: 'linear-gradient(0deg, rgba(166,126,23,1) 0%, rgba(255,238,205,1) 35%, rgba(255,230,176,1) 52%, rgba(255,255,255,1) 69%, rgba(161,134,34,1) 100%)'}}>
-      <Card>
+
+      <Card className="mt-6">
         <CardHeader className="flex gap-3">
           <div className="flex flex-col">
             <p className="text-md">AGILE DEVELOPMENT EXPERIENCE</p>
@@ -63,21 +60,20 @@ export default function ResumeContentRows() {
           </div>
           <ul className="p-4">
             <li className="mt-1 mb-1">
-              ✰ Implemented multiple dynamic data visualization components on
+              * Implemented multiple dynamic data visualization components on
               administrative and client dashboards.
             </li>
             <li className="mt-1 mb-1">
-              ✰ Implemented a fully functional Google OAuth2.0 Login with google
-              button utilizing react-oauth/google.{" "}
+              * Implemented various automated Playwright tests for Order creation, login, and account entitlements. {" "}
             </li>
             <li className="mt-1 mb-1">
-              ✰ Enhanced field validation, ensuring data integrity and
+              * Enhanced field validation, ensuring data integrity and
               mitigating duplicate entries by implementing text field validation
               logic employing efficient DynamoDB queries for secure, precise,
               and effective validation.{" "}
             </li>
             <li className="mt-1 mb-1">
-              ✰ Contributed various additional solutions and features to the
+              * Contributed various additional solutions and features to the
               Metalinguist administrative team, leveraging best practices such
               as well organized functional components, higher-order functions,
               and React.js hooks.
@@ -85,9 +81,8 @@ export default function ResumeContentRows() {
           </ul>
         </CardBody>
       </Card>
-      </Card>
-      <Card className="mt-6 p-2" style={{ backgroundImage: 'linear-gradient(0deg, rgba(166,126,23,1) 0%, rgba(255,238,205,1) 35%, rgba(255,230,176,1) 52%, rgba(255,255,255,1) 69%, rgba(161,134,34,1) 100%)'}}>
-      <Card>
+
+      <Card className="mt-6">
         <CardHeader className="flex gap-3">
           <div className="flex flex-col  ">
             <p className="text-md">
@@ -120,7 +115,7 @@ export default function ResumeContentRows() {
 
           <ul className="p-4">
             <li className="mt-1 mb-1">
-              ✰ Developed an automated open source ESPN-Inspired Athletic
+              * Developed an automated open source ESPN-Inspired Athletic
               Statistical Graphics Rendering software that gathers individual
               player data for each athlete and generates ESPN-style
               informational graphics. Leveraged Java and Jsoup library,
@@ -131,7 +126,6 @@ export default function ResumeContentRows() {
             </li>
           </ul>
         </CardBody>
-      </Card>
       </Card>
 
       <AmazonCard/>
