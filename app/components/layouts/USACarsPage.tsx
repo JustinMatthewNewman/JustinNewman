@@ -1,8 +1,13 @@
+import dynamic from 'next/dynamic';
 import React from 'react'
 
+
 function USACarsPage() {
-  return (
-    <div>USACarsPage</div>
+    const Map = dynamic(() => import('../data/DeckGLMapCars'), { ssr: false });
+return (
+    <div>
+        <Map data={undefined}/>
+    </div>
   )
 }
 

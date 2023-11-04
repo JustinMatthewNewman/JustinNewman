@@ -1,8 +1,11 @@
+import DCMapPage from '@/app/components/layouts/DCMapPage'
 import React from 'react'
 
 function DCMap() {
   return (
-    <div>DCMap</div>
+    <div>
+        <DCMapPage/>
+    </div>
   )
 }
 

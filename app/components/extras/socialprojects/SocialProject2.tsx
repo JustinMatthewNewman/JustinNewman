@@ -32,13 +32,12 @@ export default function SocialProject2() {
       </CardBody>
       <Divider/>
         <CardFooter>
-          <Link
-            isExternal
-            showAnchorIcon
-            href="https://observablehq.com/@justinmatthewnewman/mapbox-with-deck-gl"
-          >
-            Notebook
-          </Link>
+        <Link
+          showAnchorIcon
+          href="/science/USACars"
+        >
+          Interactive Data
+        </Link>
         </CardFooter>
     </Card>
   );

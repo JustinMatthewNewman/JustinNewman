@@ -32,13 +32,12 @@ export default function SocialProject3() {
       </CardBody>
       <Divider/>
         <CardFooter>
-          <Link
-            isExternal
-            showAnchorIcon
-            href="https://observablehq.com/@justinmatthewnewman/crimes-in-dc"
-          >
-            Notebook
-          </Link>
+        <Link
+          showAnchorIcon
+          href="/science/DCMap"
+        >
+          Interactive Data
+        </Link>
         </CardFooter>
     </Card>
   );
