@@ -8,6 +8,7 @@ import {
   Link,
   Image,
 } from "@nextui-org/react";
+import GasPrice from "../data/GasPrice";
 export default function GasPriceCard() {
   return (
     <div className=" container flex flex-col md:flex-row items-center justify-center mt-12 gap-4 max-w-[1200px]">
@@ -28,7 +29,7 @@ export default function GasPriceCard() {
         </CardHeader>
         <Divider />
         <CardBody>
-          <p>
+          <p className="py-2">
             Utilizing the power of D3 Observable notebooks, I have seamlessly
             harnessed Rapid API&apos;s data to create an interactive choropleth map
             of the United States, providing gas price data at a
@@ -40,6 +41,9 @@ export default function GasPriceCard() {
             intuitive and informative experience, keeping you informed about
             gas prices by state in an engaging and visually appealing manner.
           </p>
+          <div className="mt-4">
+          <GasPrice/>
+          </div>
         </CardBody>
         <Divider />
         <CardFooter>

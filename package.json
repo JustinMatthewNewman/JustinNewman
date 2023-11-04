@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@deck.gl/aggregation-layers": "^8.9.32",
+    "@justinmatthewnewman/state-choropleth-gas-prices": "https://api.observablehq.com/@justinmatthewnewman/state-choropleth-gas-prices.tgz?v=3",
     "@nextui-org/react": "^2.1.13",
+    "@observablehq/runtime": "^5.9.4",
     "@react-google-maps/api": "^2.19.2",
     "@react-hook/media-query": "^1.1.1",
     "canvas-confetti": "^1.9.0",
