@@ -99,7 +99,7 @@ function Cuda() {
               parallel programming skills to rapidly accelerate your business.
             </p>
             <Link
-              href="/assets/Parallel_Image_Processing_with_CUDA.pdf"
+              href="/documents/Parallel_Image_Processing_with_CUDA.pdf"
               target="_blank"
               style={{ cursor: "pointer" }}
             >
