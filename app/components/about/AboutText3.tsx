@@ -6,7 +6,7 @@ function AboutText3() {
       <h2
         style={{
           marginLeft: "12px",
-          fontSize: "4rem",
+          fontSize: "4.2rem",
           fontWeight: "700",
           fontFamily:
           "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
@@ -26,7 +26,7 @@ function AboutText3() {
           >
           culture
         </span>
-        , offers a feast of{" "}
+        ,{" "}offers a feast of{" "}
         <span
         className="hover:scale-110 ease-in duration-300"
           style={{

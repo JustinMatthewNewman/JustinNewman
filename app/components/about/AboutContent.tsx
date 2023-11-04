@@ -13,7 +13,7 @@ import AboutText3 from "./AboutText3";
 function AboutContent() {
   return (
     <div>
-      <div style={{ marginTop: "264px" }} className="container  max-w-[1400px]">
+      <div  className="container mt-6 max-w-[1400px] md:mt-64">
         <AboutCards />
         <Image
           fill={true}
