@@ -6,7 +6,9 @@ import globe from '../../../../public/images/science/js5.png'
 
 export default function SocialProject2() {
   return (
-    <Card>
+    <Card isHoverable isPressable onPress={() => window.open("/science/USACars", '_self')}>
+
+
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
           <p className="text-md">Car Accidents across the USA.</p>

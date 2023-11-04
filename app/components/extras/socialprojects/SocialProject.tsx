@@ -12,7 +12,7 @@ import Image from "next/image";
 import globe from '../../../../public/images/science/j1-min.png'
 export default function SocialProject() {
   return (
-    <Card>
+    <Card isHoverable isPressable onPress={() => window.open("/science/ChoroplethGlobe", '_self')}>
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
           <p className="text-md">3D Choropleth Globe</p>

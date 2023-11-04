@@ -6,7 +6,9 @@ import globe from '../../../../public/images/science/js2-min.jpg'
 
 export default function SocialProject4() {
   return (
-    <Card>
+    <Card isHoverable isPressable onPress={() => window.open("/science/ElevatedGlobe", '_self')}>
+
+
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
           <p className="text-md">Elevation by count</p>

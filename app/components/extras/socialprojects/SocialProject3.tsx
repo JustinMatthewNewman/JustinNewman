@@ -6,7 +6,9 @@ import dc from '../../../../public/images/science/dc-min.png'
 
 export default function SocialProject3() {
   return (
-    <Card>
+    <Card isHoverable isPressable onPress={() => window.open("/science/DCMap", '_self')}>
+
+
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
           <p className="text-md">Crimes in DC + school zones.</p>
