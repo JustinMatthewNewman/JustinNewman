@@ -16,7 +16,9 @@ function ElevatedGlobeComponent() {
     if (globeref.current) {
       globeref.current.controls().autoRotate = true;
       globeref.current.controls().autoRotateSpeed = 0.3;
-      globeref.current.pointOfView({ altitude: 3.14 }, 5000);
+      const isSmallScreen = window.innerWidth <= 640;
+      const altitude = isSmallScreen ? 3.5 : 2;
+      globeref.current.pointOfView({ altitude }, 5000);
       globeref.current.controls().enableZoom = false;
 
     }
