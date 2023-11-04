@@ -3,14 +3,13 @@ import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import cuda from "../../../public/images/home/cuda-min.png";
 import Image from "next/image";
-import Link from "next/link";
 
 import {
   Card,
   CardHeader,
   CardBody,
   CardFooter,
-  Divider,
+  Divider, Link
 } from "@nextui-org/react";
 
 function Cuda() {
@@ -100,8 +99,7 @@ function Cuda() {
             </p>
             <Link
               href="/documents/Parallel_Image_Processing_with_CUDA.pdf"
-              target="_blank"
-              style={{ cursor: "pointer" }}
+              isExternal
             >
               <div style={{ cursor: "pointer" }} className="video-container">
                 <Image src={cuda} alt="slowInternet" />
