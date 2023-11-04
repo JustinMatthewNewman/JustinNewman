@@ -12,15 +12,18 @@
     "@nextui-org/react": "^2.1.13",
     "@react-hook/media-query": "^1.1.1",
     "canvas-confetti": "^1.9.0",
+    "d3": "^7.8.5",
     "next": "^14.0.0",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-globe.gl": "^2.27.0",
     "react-icons": "^4.11.0",
     "react-type-animation": "^3.2.0"
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.6.2",
+    "@types/d3": "^7.4.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

@@ -32,13 +32,12 @@ export default function SocialProject4() {
       </CardBody>
       <Divider/>
         <CardFooter>
-          <Link
-            isExternal
-            showAnchorIcon
-            href="https://observablehq.com/@justinmatthewnewman/bitcoin-nodes-per-country"
-          >
-            Notebook
-          </Link>
+        <Link
+          showAnchorIcon
+          href="/science/ElevatedGlobe"
+        >
+          Interactive Data
+        </Link>
         </CardFooter>
     </Card>
   );

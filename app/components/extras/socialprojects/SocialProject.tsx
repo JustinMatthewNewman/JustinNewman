@@ -42,11 +42,10 @@ export default function SocialProject() {
       <Divider />
       <CardFooter>
         <Link
-          isExternal
           showAnchorIcon
-          href="https://observablehq.com/@justinmatthewnewman/bitcoin-nodes-per-country"
+          href="/science/ChoroplethGlobe"
         >
-          Notebook
+          Interactive Data
         </Link>
       </CardFooter>
     </Card>

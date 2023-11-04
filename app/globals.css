@@ -33,6 +33,7 @@ body::-webkit-scrollbar-track {
   min-height: 100vh; /* At least full viewport height */
 }
 
+/* Adjust the width and other styles as needed */
 
 /* This style will hide the scrollbar while maintaining scrollability */
 /* .scrollbar-hide::-webkit-scrollbar {
