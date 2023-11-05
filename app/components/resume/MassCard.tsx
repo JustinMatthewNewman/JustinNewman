@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Divider } from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Divider, Link } from "@nextui-org/react";
 import React from "react";
 import Image from "next/image";
 import a from '../../../public/images/resume/mass.png';
@@ -17,8 +17,9 @@ function MassCard() {
             </p>
           </div>
           <Card className="p-2 bg-slate-200">
-
+          <Link   href="https://massresort.com" isExternal>
           <Image width={100} src={a} alt={""} className="justify-right"/>
+          </Link>
           </Card>
 
         </CardHeader>

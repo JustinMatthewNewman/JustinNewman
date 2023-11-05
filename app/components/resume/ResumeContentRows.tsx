@@ -25,7 +25,9 @@ export default function ResumeContentRows() {
 
           </div>
           <Card className="p-2 bg-slate-200">
+            <Link   href="https://ghidra-sre.org" isExternal>
             <Image width={80} src={ghidra} alt={""} className="justify-right"/>
+            </Link>
           </Card>
         </CardHeader>
         <Divider />
@@ -59,7 +61,9 @@ export default function ResumeContentRows() {
             </div>
           </div>
           <Card className="p-2 bg-slate-200">
+          <Link   href="https://metalinguist.com" isExternal>
           <Image width={120} src={metalinguist} alt={""} className="justify-right"/>
+          </Link>
           </Card>
 
         </CardHeader>
@@ -111,7 +115,9 @@ export default function ResumeContentRows() {
           <Badge content="LIVE" color="danger" shape="circle" placement="top-left">
 
           <Card className="p-2 bg-slate-200">
+          <Link   href="https://telemediaproductions.com" isExternal>
           <Image width={180} src={tele} alt={""} className="justify-right"/>
+          </Link>
           </Card>
           </Badge>
 

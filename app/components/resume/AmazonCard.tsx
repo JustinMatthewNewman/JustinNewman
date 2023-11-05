@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Divider, Badge} from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Divider, Badge, Link} from "@nextui-org/react";
 import React from "react";
 import Image from "next/image";
 import a from '../../../public/images/resume/amazon.svg';
@@ -18,7 +18,10 @@ function AmazonCard() {
           </div>
           <Badge content="1200+ packages" color="danger" shape="circle" placement="top-left">
           <Card className="p-2 bg-slate-200">
+          <Link   href="https://hiring.amazon.com" isExternal>
+
           <Image width={100} src={a} alt={""} className="justify-right mt-2 "/>
+          </Link>
           </Card>
           </Badge>
 
@@ -26,7 +29,7 @@ function AmazonCard() {
         <Divider />
         <CardBody>
           <p>
-            Working as a Fulfillment Associate at an Amazon warehouse was a very
+            Working as a Fulfillment Associate for Amazon was a very
             eye-opening experience that taught me some valuable life lessons,
             including empathy and respect, as well as the importance of <span className="font-bold">taking
             initiative and working hard </span> to achieve goals. I had the opportunity

@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Divider } from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Divider, Link } from "@nextui-org/react";
 import React from "react";
 import Image from "next/image";
 import a from '../../../public/images/resume/ara.png'
@@ -17,7 +17,9 @@ function ChefCard() {
             </p>
           </div>
           <Card className="p-2 bg-slate-200">
+          <Link   href="https://aramark.com" isExternal>
           <Image width={100} src={a} alt={""} className="justify-right mt-2 mb-2"/>
+          </Link>
           </Card>
 
         </CardHeader>
