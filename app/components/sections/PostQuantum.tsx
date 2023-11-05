@@ -2,11 +2,11 @@
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import quantum from "../../../public/images/home/quan.png";
 
-import { Card, CardHeader, CardBody, CardFooter, Divider } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Skeleton, Divider } from "@nextui-org/react";
 
 
 function PostQuantum() {
@@ -43,7 +43,7 @@ function PostQuantum() {
       icon: "🔑",
     },
   ];
-
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <div className='max-w-[1380px] mx-auto p-2 grid lg:grid-cols-5 gap-2 py-8'>
 
@@ -93,12 +93,15 @@ function PostQuantum() {
 
             {/* EMBED YOUTUBE VIDEO HERE */}
             <Link href="https://github.com/JustinMatthewNewman/PostQuantumCryptography" target="_blank" style={{ cursor: "pointer" }}>
-              <div className="video-container">
-
+              <div>
+              <Skeleton isLoaded={imageLoaded} className="rounded-lg">
                 <Image
                   src={quantum}
                   alt="slowInternet"
-                />
+                  onLoad={() => setImageLoaded(true)}
+                  className="rounded-lg"
+                  />
+                  </Skeleton>
               </div>
             </Link>
           </CardBody>

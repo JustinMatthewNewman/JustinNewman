@@ -1,9 +1,9 @@
 'use client'
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import { Card, CardHeader, CardBody, CardFooter, Divider } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Skeleton, Divider } from "@nextui-org/react";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import secure from "../../../public/images/home/dataDriver-min.jpg";
 
@@ -46,6 +46,7 @@ function DataViz() {
       icon: "📝",
     },
   ];
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <div className='max-w-[1380px] mx-auto p-2 grid lg:grid-cols-5 gap-2 py-8'>
 
@@ -89,15 +90,19 @@ function DataViz() {
             </p>
 
             {/* EMBED YOUTUBE VIDEO HERE */}
-            <div className="video-container">
               <Link href="https://observablehq.com/@justinmatthewnewman" target="_blank" style={{ cursor: "pointer" }}>
+            <div>
+              <Skeleton isLoaded={imageLoaded} className="rounded-lg">
+
                 <Image
-                  style={{ padding: "12px", cursor: "pointer" }}
                   src={secure}
                   alt="slowInternet"
-                />
-              </Link>
+                  onLoad={() => setImageLoaded(true)}
+                  className="rounded-lg" 
+                  />
+                  </Skeleton>
             </div>
+              </Link>
           </CardBody>
 
         </Card>

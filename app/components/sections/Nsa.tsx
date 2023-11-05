@@ -1,8 +1,8 @@
 'use client'
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import { Accordion, AccordionItem, Skeleton } from "@nextui-org/react";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Card, CardHeader, CardBody, CardFooter, Divider } from "@nextui-org/react";
 import encrypt from "../../../public/images/home/encypt.jpeg";
@@ -42,7 +42,7 @@ function Nsa() {
             icon: "🛠️",
         },
     ];
-
+    const [imageLoaded, setImageLoaded] = useState(false);
     return (
         <div className='max-w-[1380px] mx-auto p-2 grid lg:grid-cols-5 gap-2 py-8'>
 
@@ -90,9 +90,10 @@ function Nsa() {
                         </p>
 
                         {/* EMBED YOUTUBE VIDEO HERE */}
-                        <div className="video-container">
-                            {/* <Image src={future} layout="" alt="slowInternet" /> */}
-                            <Image src={encrypt} alt="slowInternet" />
+                        <div>
+                        <Skeleton isLoaded={imageLoaded} className="rounded-lg">
+                            <Image className="rounded-lg"  onLoad={() => setImageLoaded(true)} src={encrypt} alt="slowInternet" />
+                        </Skeleton>
                         </div>
                     </CardBody>
                 </Card>

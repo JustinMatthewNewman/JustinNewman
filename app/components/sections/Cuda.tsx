@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import React, { useState } from "react";
+import { Accordion, AccordionItem, Skeleton} from "@nextui-org/react";
 import cuda from "../../../public/images/home/cuda-min.png";
 import Image from "next/image";
 
@@ -46,6 +46,8 @@ function Cuda() {
       icon: "⚙️",
     },
   ];
+  const [imageLoaded, setImageLoaded] = useState(false);
+
 
   return (
     <div className="max-w-[1380px] mx-auto p-2 grid lg:grid-cols-5 gap-2 py-8">
@@ -102,7 +104,9 @@ function Cuda() {
               isExternal
             >
               <div style={{ cursor: "pointer" }} className="video-container">
-                <Image src={cuda} alt="slowInternet" />
+              <Skeleton isLoaded={imageLoaded} className="rounded-lg">
+                <Image  className="rounded-lg" onLoad={() => setImageLoaded(true)} src={cuda} alt="slowInternet" />
+              </Skeleton>
               </div>
             </Link>
 
