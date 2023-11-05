@@ -4,40 +4,45 @@ import React from "react";
 function MassCard() {
   return (
     <div>
-        <Card className="mt-6">
-          <CardHeader className="flex gap-3">
-            <div className="flex flex-col  ">
-              <p className="text-small text-default-500 items-left">
-                Park Attendant at Massanutten Resort
-              </p>
-              <p className="text-small text-default-500 items-right">
-                Summer 2021
-              </p>
-            </div>
-          </CardHeader>
-          <Divider />
-          <CardBody>
-            <p>
-              Working as a Zipline Attendant at Massanutten Family Adventure
-              Park was a transformative experience. In this role, I had the
-              opportunity to interact with a diverse array of visitors from
-              various backgrounds, rekindling a sense of community that had been
-              somewhat lost during the isolation of the COVID-19 pandemic. This
-              exposure allowed me to relate to people from various walks of life
-              and improve my communication skills. I discovered the power of
-              connection and making friends with individuals seeking adventure.
-              This role offered a refreshing escape from the isolation of
-              coursework during the pandemic, reminding me of the intrinsic
-              human need for social interaction and outdoor engagement. The
-              bonds I formed during my time as a Zipline Attendant were not only
-              personally enriching but also contributed to the overall enjoyment
-              and positive experience of our guests. It was a reminder that
-              personal growth and fulfillment can be found in stepping outside
-              of one&apos;s comfort zone, embracing new challenges, and building
-              meaningful connections with others.
+      <Card className="mt-6">
+        <CardHeader className="flex gap-3">
+          <div className="flex flex-col  ">
+            <p className="text-small text-default-500 items-left">
+              Park Attendant at Massanutten Resort
             </p>
-          </CardBody>
-        </Card>
+            <p className="text-small text-default-500 items-right">
+              Summer 2021
+            </p>
+          </div>
+        </CardHeader>
+        <Divider />
+        <CardBody>
+          <p>
+            Joining the Massanutten Resort as a zipline
+            attendant in the summer of 2021 was a heartfelt decision for me.
+            After a particularly challenging year in college disrupted by COVID,
+            marked by long hours of programming and academic stress while being
+            isolated, I felt an intense desire for adventure and a break from
+            solitude. The role provided the perfect opportunity to reconnect
+            with nature and the community. It allowed me to step away from the
+            lockdown and into the open air. The role also helped me develop
+            essential interpersonal skills. I honed my communication abilities
+            and learned to empathize effectively with individuals from many
+            different backgrounds. This experience was great, as it emphasized
+            the importance of teamwork and adaptability, qualities that are
+            essential. Additionally, the incentive of a free ski pass was a
+            significant factor in my decision to work at the resort. It allowed
+            me to enjoy the benefits of the great outdoors even during the
+            winter months. During my time at the resort, I also discovered that
+            when the park wasn&apos;t busy, it provided moments of reflection and
+            personal growth. I used this time wisely to explore my creative side
+            through poetry, allowing me to express my thoughts and emotions.
+            Additionally, this summer I had also took on the challenge of
+            completing calculus 2, further enhancing my problem-solving skills
+            and dedication to learning.
+          </p>
+        </CardBody>
+      </Card>
     </div>
   );
 }
