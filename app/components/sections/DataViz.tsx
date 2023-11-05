@@ -1,10 +1,9 @@
 'use client'
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import { Card, CardHeader, CardBody, Skeleton, Divider } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Skeleton, Divider, Link} from "@nextui-org/react";
 
 import Image from "next/image";
 import React, { useState } from "react";
-import Link from "next/link";
 import secure from "../../../public/images/home/dataDriver-min.jpg";
 
 function DataViz() {
@@ -90,7 +89,7 @@ function DataViz() {
             </p>
 
             {/* EMBED YOUTUBE VIDEO HERE */}
-              <Link href="https://observablehq.com/@justinmatthewnewman" target="_blank" style={{ cursor: "pointer" }}>
+              <Link href="https://observablehq.com/@justinmatthewnewman" isExternal>
             <div>
               <Skeleton isLoaded={imageLoaded} className="rounded-lg">
 

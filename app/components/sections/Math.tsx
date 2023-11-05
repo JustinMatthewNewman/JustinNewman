@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-
+import YouTube, { YouTubeProps } from "react-youtube";
 
 import {
   Card,
@@ -10,6 +10,7 @@ import {
   CardBody,
   CardFooter,
   Divider,
+  Skeleton,
 } from "@nextui-org/react";
 import Formula from "../math/Formula";
 
@@ -112,6 +113,19 @@ export default function Math() {
       source: "Calculus Courses",
     },
   ];
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const videoOptions = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      // Set any additional options or parameters here
+    },
+  };
+
+  const onVideoReady = () => {
+    // The video is now ready, you can remove the skeleton
+    setImageLoaded(true);
+  };
 
   return (
     <div
@@ -158,17 +172,19 @@ export default function Math() {
               decisions. I am well-versed in calculus, including
               L&apos;Hôpital&apos;s rule, differentiation, and integration, with
               applications in optimization and scientific computing. Overall, my
-              expertise equips me to tackle complex problems, optimize
+              expertise equips me to develop great solutions, optimize
               algorithms, and contribute effectively to software engineering.
             </p>
 
-            <div className="video-container">
-              <iframe
-                src="https://www.youtube.com/embed/JgxKb_1bp7I?si=J1aroGsMGycs6nfA"
-                title="YouTube video player"
-                allowFullScreen
-              ></iframe>
-            </div>
+            <Skeleton isLoaded={imageLoaded} className="mt-2 rounded-lg">
+              <div className="video-container">
+                <YouTube
+                  videoId="JgxKb_1bp7I"
+                  opts={videoOptions}
+                  onReady={onVideoReady}
+                />
+              </div>
+            </Skeleton>
             <div className="mt-6 mb-10">
               <Formula />
             </div>

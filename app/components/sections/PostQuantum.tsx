@@ -3,10 +3,9 @@ import { Accordion, AccordionItem } from "@nextui-org/react";
 
 import Image from "next/image";
 import React, { useState } from "react";
-import Link from "next/link";
 import quantum from "../../../public/images/home/quan.png";
 
-import { Card, CardHeader, CardBody, Skeleton, Divider } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Skeleton, Divider, Link } from "@nextui-org/react";
 
 
 function PostQuantum() {
@@ -92,7 +91,7 @@ function PostQuantum() {
             </p>
 
             {/* EMBED YOUTUBE VIDEO HERE */}
-            <Link href="https://github.com/JustinMatthewNewman/PostQuantumCryptography" target="_blank" style={{ cursor: "pointer" }}>
+            <Link href="https://github.com/JustinMatthewNewman/PostQuantumCryptography" isExternal>
               <div>
               <Skeleton isLoaded={imageLoaded} className="rounded-lg">
                 <Image
