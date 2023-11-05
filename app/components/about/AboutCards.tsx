@@ -42,7 +42,7 @@ export default function AboutCards() {
   return (
     <div className="gap-4 grid grid-cols-1 md:grid-cols-4">
       {list.map((item, index) => (
-        <Card shadow="sm" key={index} isHoverable isBlurred isPressable onPress={() => window.open(item.href)}>
+        <Card shadow="sm" key={index} isHoverable isPressable onPress={() => window.open(item.href)}>
           <CardBody className="overflow-visible p-2">
           <Skeleton isLoaded={imageLoaded} className="rounded-lg">
 
