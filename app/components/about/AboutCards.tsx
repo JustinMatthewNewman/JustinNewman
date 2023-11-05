@@ -1,7 +1,7 @@
 'use client'
 
-import React from "react";
-import {Card, CardBody, CardFooter, Link} from "@nextui-org/react";
+import React, { useState } from "react";
+import {Card, CardBody, CardFooter, Skeleton} from "@nextui-org/react";
 import Image from "next/image";
 
 import food from "../../../public/images/projects/food.webp";
@@ -38,17 +38,21 @@ export default function AboutCards() {
       href: '/more',
     },
   ];
-
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <div className="gap-4 grid grid-cols-1 md:grid-cols-4">
       {list.map((item, index) => (
         <Card shadow="sm" key={index} isHoverable isBlurred isPressable onPress={() => window.open(item.href)}>
           <CardBody className="overflow-visible p-2">
+          <Skeleton isLoaded={imageLoaded} className="rounded-lg">
+
             <Image
               alt={item.title}
               className="w-full object-cover h-[240px] rounded-xl"
               src={item.img}
-            />
+              onLoad={() => setImageLoaded(true)}
+              />
+              </Skeleton>
           </CardBody>
           <CardFooter className="text-small justify-between">
             <b>{item.title}</b>
