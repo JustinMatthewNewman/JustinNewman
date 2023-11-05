@@ -1,12 +1,9 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { NextLogo } from "./NextLogo";
 import { VercelLogo } from "./VercelLogo";
 import { Spacer } from "@nextui-org/spacer";
-
-
 
 function Footer() {
 
@@ -31,15 +28,16 @@ function Footer() {
                 "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
             }}
           >
-            Justin Newman | Jr. Software Engineer |{" "}
-            <Link
+            Justin Newman | Jr. Software Engineer
+            
+          </p>
+          <Link
               href="https://metalinguist.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               Metalinguist LLC
             </Link>
-          </p>
         </div>
       </div>
     </div>
