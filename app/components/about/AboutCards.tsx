@@ -45,7 +45,6 @@ export default function AboutCards() {
         <Card shadow="sm" key={index} isHoverable isPressable onPress={() => window.open(item.href)}>
           <CardBody className="overflow-visible p-2">
           <Skeleton isLoaded={imageLoaded} className="rounded-lg">
-
             <Image
               alt={item.title}
               className="w-full object-cover h-[240px] rounded-xl"
