@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardHeader,
@@ -99,7 +99,7 @@ export default function AboutImages() {
     //   caption: "Additional Skills",
     // },
   ];
-
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <div className="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {list.map((item, index) => (
@@ -140,8 +140,8 @@ export default function AboutImages() {
             style={{ pointerEvents: "none" }}
             className="px-3 py-0 text-small text-default-400 h-full scrollbar-hide"
           >
-            <Skeleton className="rounded-lg">
-            <Image src={item.img} alt={""} />
+            <Skeleton isLoaded={imageLoaded} className="rounded-lg">
+            <Image onLoad={() => setImageLoaded(true)} src={item.img} alt={""} />
             </Skeleton>
             <p className=" text-default-400 text-small p-2">{item.title}</p>
           </CardBody>
