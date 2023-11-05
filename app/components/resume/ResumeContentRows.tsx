@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card, CardHeader, CardBody, Divider, Badge } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Divider, Badge, Link } from "@nextui-org/react";
 import CheckBoxRow from "../extras/checkboxrow/CheckBoxRow";
 import CheckBoxRowMeta from "../extras/checkboxrow/CheckBoxRowMeta";
 import AmazonCard from "./AmazonCard";
@@ -24,7 +24,9 @@ export default function ResumeContentRows() {
             <p className="text-small text-default-500">CONFIDENTIAL</p>
 
           </div>
+          <Card className="p-2 bg-slate-200">
             <Image width={80} src={ghidra} alt={""} className="justify-right"/>
+          </Card>
         </CardHeader>
         <Divider />
         <CardBody>
@@ -56,7 +58,9 @@ export default function ResumeContentRows() {
 
             </div>
           </div>
+          <Card className="p-2 bg-slate-200">
           <Image width={120} src={metalinguist} alt={""} className="justify-right"/>
+          </Card>
 
         </CardHeader>
         <Divider />
@@ -70,24 +74,24 @@ export default function ResumeContentRows() {
           </h4>
           <p>During my time contracted by Metalinguist LLC I have:</p>
           <ul className="p-4">
-            <li className="mt-1 mb-1">
-              * Implemented multiple dynamic data visualization components on
+            <li className="mt-2 mb-2">
+              Implemented multiple <span className="font-bold">dynamic data visualization components</span> on
               administrative and client dashboards.
             </li>
-            <li className="mt-1 mb-1">
-              * Implemented various automated Playwright tests for Order creation, login, and account entitlements. {" "}
+            <li className="mt-2 mb-2">
+              Implemented various  <span className="font-bold">automated Playwright tests </span> for Order creation, login, and account entitlements. {" "}
             </li>
-            <li className="mt-1 mb-1">
-              * Enhanced field validation, ensuring data integrity and
+            <li className="mt-2 mb-2">
+              Enhanced field validation, ensuring data integrity and
               mitigating duplicate entries by implementing text field validation
-              logic employing efficient DynamoDB queries for secure, precise,
+              logic employing  <span className="font-bold"> efficient DynamoDB queries </span> for secure, precise,
               and effective validation.{" "}
             </li>
-            <li className="mt-1 mb-1">
-              * Contributed various additional solutions and features to the
-              Metalinguist administrative team, leveraging best practices such
-              as well organized functional components, higher-order functions,
-              and React.js hooks.
+            <li className="mt-2 mb-2">
+              Contributed various additional solutions and features to the
+              Metalinguist dev team, leveraging best practices such
+              as well  <span className="font-bold"> organized functional components, higher-order functions,
+              and React.js hooks. </span>
             </li>
           </ul>
         </CardBody>
@@ -115,34 +119,30 @@ export default function ResumeContentRows() {
         <Divider />
         <CardBody>
           <p>
-            During my employment I have provided diverse forms of technical
-            assistance to various broadcast crews including iPhone screen repair, freelance
+            During my employment I have had the priviledge to be a part of <span className="font-bold">
+            over 100 success Live Video Productions
+            </span> and provided diverse forms of technical
+            assistance to various broadcast crews including <span className="font-bold">iPhone screen repair, freelance
             software engineering, camera operation, replay-unit operation, and
-            statistical graphics rendering.
-          </p>
-
-          <p className="mt-2 mb-2">
-          Referenceable Broadcasting Departments
+            statistical graphics rendering.</span>
           </p>
           <div className="mt-4 mb-4">
             <CheckBoxRow />
           </div>
 
-          <ul className="p-4">
-            <li className="mt-1 mb-1">
-            * Over 100 success Live Video Productions.
+          <ul className="">
 
-            </li>
-            <li className="mt-1 mb-1">
-              * Developed an automated open source ESPN-Inspired Athletic
-              Statistical Graphics Rendering software that gathers individual
+            <li className="mt-2 mb-2">
+              Also I developed an automated <span className="font-bold">  open source ESPN-Inspired Athletic
+              Statistical Graphics Rendering software </span> that gathers individual
               player data for each athlete and generates ESPN-style
               informational graphics. Leveraged Java and Jsoup library,
               processing team roster URLs to efficiently collect and present the
-              statistics. Generates graphics for entire team’s in seconds
-              including sideline personnel, for all sports, for almost all
+              statistics. <span className="font-bold"> Generates graphics for entire team’s in seconds
+              </span> including sideline personnel, for all sports, for almost all
               universities.
             </li>
+              <Link  className="p-4" href="https://stars-2.vercel.app" isExternal showAnchorIcon> LIVE APP </Link>
           </ul>
         </CardBody>
       </Card>

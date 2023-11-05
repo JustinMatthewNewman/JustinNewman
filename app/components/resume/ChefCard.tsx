@@ -10,7 +10,7 @@ function ChefCard() {
         <CardHeader className="justify-between">
           <div className="flex flex-col  ">
             <p className="text-small text-default-500 items-left">
-              Chef at Aramark
+              Chef and Food service
             </p>
             <p className="text-small text-default-500 items-right">
               First semester of College
@@ -26,8 +26,8 @@ function ChefCard() {
           <p>
             During my freshman year of college, I wanted to set a positive
             example and took a job at the university dining hall to work as a
-            chef, an experience that would introduce me to Salal, a remarkable
-            coworker and friend. Salal&apos;s story was one of courage and
+            chef, an experience that would introduce me to Salal, a <span className="font-bold"> remarkable
+            coworker </span> and friend. Salal&apos;s story was one of courage and
             resilience, as he had immigrated from Iraq in search of a better
             life. Salal&apos;s journey to the United States was marked by
             significant challenges and hardships. Fleeing a war-torn homeland,
@@ -35,8 +35,8 @@ function ChefCard() {
             his family. His struggles included adapting to a new culture,
             learning a new language, and navigating the complexities of
             immigration. Our paths crossed in the kitchen of the dining hall,
-            where we both worked tirelessly to prepare meals for the college
-            community. Despite the demanding nature of our job, &apos;s spirit
+            where we both <span className="font-bold"> worked tirelessly to prepare meals for the college
+            community. </span> Despite the demanding nature of our job, &apos;s spirit
             remained unbroken. He was unfailingly kind and gracious. One of the
             memorable aspects of our friendship was our shared responsibility
             for cleaning the hoods after long shifts. This tedious task required
@@ -47,7 +47,7 @@ function ChefCard() {
             and example served as a constant reminder of the importance of
             empathy and understanding. Despite the challenges he faced and the
             prejudices he occasionally encountered, he always treated others
-            with respect and kindness. Our time working together in that college
+            with <span className="font-bold">respect and kindness. </span> Our time working together in that college
             dining hall left a lasting impression on me. Salal&apos;s story of
             perseverance and our enduring friendship served as a powerful
             reminder of the strength of the human spirit.
