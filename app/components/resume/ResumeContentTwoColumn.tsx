@@ -87,7 +87,7 @@ function ResumeContentTwoColumn() {
           </CardHeader>
           <CardBody>
             <p>
-            <Link   href="https://melodifylabs.com" isExternal >MelodifyLabs.com (Next, Firebase, Vercel, API's) </Link> Created a full stack
+            <Link   href="https://melodifylabs.com" isExternal >MelodifyLabs.com (Next, Firebase, Vercel, API&apos;s) </Link> Created a full stack
               platform for converting user text prompts into songs. Deployed
               with vercel web hosting, next-generation secure authentication,
               OpenAI API lyric generation, utilized text-to-speech API for vocal
