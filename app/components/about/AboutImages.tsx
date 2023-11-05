@@ -7,6 +7,7 @@ import {
   CardFooter,
   Avatar,
   Button,
+  Skeleton
 } from "@nextui-org/react";
 import confetti from "canvas-confetti";
 import Image from "next/image";
@@ -139,7 +140,9 @@ export default function AboutImages() {
             style={{ pointerEvents: "none" }}
             className="px-3 py-0 text-small text-default-400 h-full scrollbar-hide"
           >
+            <Skeleton className="rounded-lg">
             <Image src={item.img} alt={""} />
+            </Skeleton>
             <p className=" text-default-400 text-small p-2">{item.title}</p>
           </CardBody>
           <CardFooter className="gap-3">
