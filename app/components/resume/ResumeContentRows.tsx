@@ -1,23 +1,30 @@
 import React from "react";
 
-import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Divider, Badge } from "@nextui-org/react";
 import CheckBoxRow from "../extras/checkboxrow/CheckBoxRow";
 import CheckBoxRowMeta from "../extras/checkboxrow/CheckBoxRowMeta";
 import AmazonCard from "./AmazonCard";
 import MassCard from "./MassCard";
 import ChefCard from "./ChefCard";
+import Image from "next/image";
 // import LifeCard from "./LifeCard";
+
+import ghidra from '../../../public/images/resume/g.avif'
+import metalinguist from '../../../public/images/resume/logo.avif'
+import tele from '../../../public/images/resume/tele.webp'
 
 
 export default function ResumeContentRows() {
   return (
     <div>
       <Card>
-        <CardHeader className="flex gap-3">
+        <CardHeader className="justify-between">
           <div className="flex flex-col">
-            <p className="text-md">COMPUTER SYSTEMS EXPERIENCE</p>
+            <p className="text-md">COMPUTER SYSTEMS</p>
             <p className="text-small text-default-500">CONFIDENTIAL</p>
+
           </div>
+            <Image width={80} src={ghidra} alt={""} className="justify-right"/>
         </CardHeader>
         <Divider />
         <CardBody>
@@ -35,29 +42,33 @@ export default function ResumeContentRows() {
       </Card>
 
       <Card className="mt-6">
-        <CardHeader className="flex gap-3">
+        <CardHeader className="justify-between">
           <div className="flex flex-col">
             <p className="text-md">AGILE DEVELOPMENT EXPERIENCE</p>
 
             <div className="flex flex-col  ">
               <p className="text-small text-default-500 items-left">
-                Junior Software Engineer contracted by Metalinguist LLC.
+                Jr Software Engineer
               </p>
               <p className="text-small text-default-500 items-right">
                 2/22/2023 - Present
               </p>
+
             </div>
           </div>
+          <Image width={120} src={metalinguist} alt={""} className="justify-right"/>
+
         </CardHeader>
         <Divider />
         <CardBody>
+          <div className="mt-1 mb-4">
+            <CheckBoxRowMeta />
+          </div>
           <h4>
             Metalinguist is a client portal/digital storefront for the
             translation industry with CAT tool integrations.
           </h4>
-          <div className="mt-4 mb-4">
-            <CheckBoxRowMeta />
-          </div>
+          <p>During my time contracted by Metalinguist LLC I have:</p>
           <ul className="p-4">
             <li className="mt-1 mb-1">
               * Implemented multiple dynamic data visualization components on
@@ -83,19 +94,23 @@ export default function ResumeContentRows() {
       </Card>
 
       <Card className="mt-6">
-        <CardHeader className="flex gap-3">
+        <CardHeader className="justify-between">
           <div className="flex flex-col  ">
-            <p className="text-md">
-              +100 LIVE UNIVERSITY SPORTS BROADCASTING EVENTS
-            </p>
 
             <p className="text-small text-default-500 items-left">
-              Technical Operations contracted by Telemedia Productions.
+              Technical Operations
             </p>
             <p className="text-small text-default-500 items-right">
               9/20/2018 - Present
             </p>
           </div>
+          <Badge content="LIVE" color="danger" shape="circle" placement="top-left">
+
+          <Card className="p-2 bg-slate-200">
+          <Image width={180} src={tele} alt={""} className="justify-right"/>
+          </Card>
+          </Badge>
+
         </CardHeader>
         <Divider />
         <CardBody>
@@ -114,6 +129,10 @@ export default function ResumeContentRows() {
           </div>
 
           <ul className="p-4">
+            <li className="mt-1 mb-1">
+            * Over 100 success Live Video Productions.
+
+            </li>
             <li className="mt-1 mb-1">
               * Developed an automated open source ESPN-Inspired Athletic
               Statistical Graphics Rendering software that gathers individual

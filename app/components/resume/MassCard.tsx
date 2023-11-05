@@ -1,24 +1,28 @@
 import { Card, CardBody, CardHeader, Divider } from "@nextui-org/react";
 import React from "react";
+import Image from "next/image";
+import a from '../../../public/images/resume/mass.png';
 
 function MassCard() {
   return (
     <div>
       <Card className="mt-6">
-        <CardHeader className="flex gap-3">
+        <CardHeader className="justify-between">
           <div className="flex flex-col  ">
             <p className="text-small text-default-500 items-left">
-              Park Attendant at Massanutten Resort
+              Park Attendant
             </p>
             <p className="text-small text-default-500 items-right">
               Summer 2021
             </p>
           </div>
+          <Image width={100} src={a} alt={""} className="justify-right mr-2 mt-2 mb-2"/>
+
         </CardHeader>
         <Divider />
         <CardBody>
           <p>
-            Joining the Massanutten Resort as a zipline
+            Joining Massanutten Resort as a zipline
             attendant in the summer of 2021 was a heartfelt decision for me.
             After a particularly challenging year in college disrupted by COVID,
             marked by long hours of programming and academic stress while being

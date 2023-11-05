@@ -1,23 +1,27 @@
-import { Card, CardBody, CardHeader, Divider } from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Divider, Badge} from "@nextui-org/react";
 import React from "react";
-
+import Image from "next/image";
+import a from '../../../public/images/resume/amazon.svg';
 function AmazonCard() {
   return (
     <div>
       <Card className="mt-6">
-        <CardHeader className="flex gap-3">
+        <CardHeader className="justify-between">
           <div className="flex flex-col  ">
-            <p className="text-md">
-              +1000 successfully sorted packages per-shift.
-            </p>
 
             <p className="text-small text-default-500 items-left">
-              Fulfillment Associate at Amazon
+              Fulfillment Associate
             </p>
             <p className="text-small text-default-500 items-right">
               Summer 2022
             </p>
           </div>
+          <Badge content="1200+ packages" color="danger" shape="circle" placement="top-left">
+          <Card className="p-2 bg-slate-200">
+          <Image width={100} src={a} alt={""} className="justify-right mt-2 "/>
+          </Card>
+          </Badge>
+
         </CardHeader>
         <Divider />
         <CardBody>
