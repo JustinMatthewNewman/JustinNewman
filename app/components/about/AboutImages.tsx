@@ -18,11 +18,11 @@ import pic5 from "../../../public/images/about/5.png";
 import pic6 from "../../../public/images/about/6.png";
 
 import pic7 from "../../../public/images/about/7.jpg";
-import pic8 from "../../../public/images/about/8.jpg";
-import pic9 from "../../../public/images/about/9.jpg";
+// import pic8 from "../../../public/images/about/8.jpg";
+// import pic9 from "../../../public/images/about/9.jpg";
 import pic10 from "../../../public/images/about/10.jpg";
-import pic11 from "../../../public/images/about/11.jpg";
-import pic12 from "../../../public/images/about/12.png";
+import pic11 from "../../../public/images/about/11.png";
+// import pic12 from "../../../public/images/about/12.png";
 
 export default function AboutImages() {
   const [isFollowed, setIsFollowed] = React.useState(false);
