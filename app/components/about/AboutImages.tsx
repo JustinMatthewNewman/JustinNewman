@@ -102,7 +102,7 @@ export default function AboutImages() {
   return (
     <div className="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {list.map((item, index) => (
-        <Card className="max-w-[345px]">
+        <Card  key={index} className="max-w-[345px]">
           <CardHeader className="justify-between">
             <div className="flex gap-5">
               <Avatar
