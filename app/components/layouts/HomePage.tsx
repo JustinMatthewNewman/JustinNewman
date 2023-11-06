@@ -17,10 +17,20 @@ import Infocard from "../extras/info/InfoCard";
 import Infocard2 from "../extras/info/InfoCard2";
 
 import Image from "next/image";
+import MainHero from "../home/MainHero";
+import Metalinguist from "../sections/Metalinguist";
 
 const Main = () => {
   return (
     <div className="w-full">
+
+<div className="flex flex-col md:flex-row items-center justify-center m-5 gap-4">
+        <MainHero/>
+      </div>
+      <div className="border-none bg-background/60 dark:bg-black-100/50 w-full mt-5">
+        <Metalinguist/>
+      </div>
+
       <div className="flex flex-col md:flex-row items-center justify-center m-5 gap-4">
         <Kaggle />
       </div>
@@ -34,6 +44,7 @@ const Main = () => {
       </div>
 
       <Image
+      className="hidden md:block"
         fill={true}
         src={bgLines}
         alt="Background"
@@ -53,10 +64,9 @@ const Main = () => {
         priority
         style={{
           zIndex: -1,
-          marginTop: 1400,
+          marginTop: 2200,
         }}
       />
-
 
       <div className="border-none bg-background/60 dark:bg-black-100/50 w-full mt-5">
         <Nsa />
