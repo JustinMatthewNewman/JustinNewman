@@ -1,7 +1,7 @@
 import React from "react";
 
-import Image from "next/image";
-import bgLines from "../../../public/images/background/looper-pattern.svg";
+// import Image from "next/image";
+// import bgLines from "../../../public/images/background/looper-pattern.svg";
 import ResumeHero from "../resume/ResumeHero";
 import ResumeContentTwoColumn from "../resume/ResumeContentTwoColumn";
 import ResumeContentRows from "../resume/ResumeContentRows";
@@ -9,13 +9,13 @@ import DocumentsContent from "../documents/DocumentsContent";
 import CoursesContent from "../documents/CoursesContent";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
-import lines from '../../../public/images/background/six-04.svg';
+// import lines from '../../../public/images/background/six-04.svg';
 
 export default function ResumePage() {
   return (
     <div className="w-full">
       <ResumeHero />
-      <Image
+      {/* <Image
       className="lg:hidden"
           src={lines}
           alt="Background"
@@ -30,7 +30,7 @@ export default function ResumePage() {
             transform: 'scaleY(-1)'
 
           }}
-        />
+        /> */}
       <div className="container flex flex-col md:flex-row items-center justify-center mt-5 gap-4 max-w-[1200px]">
         <h4
           style={{
