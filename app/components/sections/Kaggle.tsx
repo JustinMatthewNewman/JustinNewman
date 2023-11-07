@@ -7,14 +7,28 @@ import {
   CardFooter,
   Divider,
   Link,
-  Image,
 } from "@nextui-org/react";
 import SocialKaggle from "../extras/socialkaggle/SocialKaggle";
 import SocialKaggle2 from "../extras/socialkaggle/SocialKaggle2";
+import DNA from "../../../public/images/background/platform-dna2.png";
+import Image from "next/image";
 
 export default function Kaggle() {
   return (
     <div>
+      <Image
+        src={DNA}
+        fill={true}
+        alt="Background"
+        className="hidden lg:block"
+        quality={100}
+        priority
+        style={{
+          zIndex: -1,
+          marginTop: 500,
+          opacity: 0.3,
+        }}
+      />
       <Card className="max-w-[1200px] mt-6 mb-6">
         <CardHeader className="flex gap-3">
           <div className="flex flex-col">
@@ -34,9 +48,9 @@ export default function Kaggle() {
             segmentation to divide large images into smaller, more manageable
             segments (225x225 pixel tiles). This segmentation allows the model
             to focus on finer details within the tissue samples, potentially
-            improving the accuracy of cancer detection. Additionally, I
-            plan to implement CUDA GPU acceleration to further enhance the
-            processing speed once the model is trained on a smaller dataset.
+            improving the accuracy of cancer detection. Additionally, I plan to
+            implement CUDA GPU acceleration to further enhance the processing
+            speed once the model is trained on a smaller dataset.
           </p>
         </CardBody>
       </Card>
@@ -49,7 +63,7 @@ export default function Kaggle() {
           <Image
             alt="nextui logo"
             height={40}
-            radius="sm"
+            className="rounded"
             src="https://github.com/justinmatthewnewman.png"
             width={40}
           />
