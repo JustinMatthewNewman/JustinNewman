@@ -17,14 +17,30 @@ import Infocard from "../extras/info/InfoCard";
 import Infocard2 from "../extras/info/InfoCard2";
 
 import Image from "next/image";
+import SuperHero from "../home/SuperHero";
+import NextBanner from "../home/NextBanner";
+import Metalinguist from "../sections/Metalinguist";
 
 const Main = () => {
   return (
     <div className="w-full">
-      <div className="flex flex-col md:flex-row items-center justify-center m-5 gap-4">
-        <Kaggle />
+      {/* <FullWidthBannerPhoto /> */}
+      <div className="flex flex-col md:flex-row items-center justify-center ">
+      <NextBanner/>
+      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center m-5 gap-4 py-12">
+      <SuperHero/>
       </div>
 
+
+      <div style={{backdropFilter: 'blur(5px'}} className="border-none bg-background/60 dark:bg-black-100/50 w-full mb-12">
+        <div className="container flex flex-col md:flex-row items-center justify-center mt-12 gap-4 max-w-[1200px]">
+          <Kaggle />
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center m-5 gap-4">
+      <Metalinguist/>
+      </div>
       <div className="border-none bg-background/60 dark:bg-black-100/50 w-full mt-5">
         <Cuda />
       </div>
@@ -34,17 +50,6 @@ const Main = () => {
       </div>
 
       <Image
-        fill={true}
-        src={bgLines}
-        alt="Background"
-        quality={100}
-        priority
-        style={{
-          zIndex: -1,
-          marginTop: -195,
-        }}
-      />
-      <Image
         src={lines}
         fill={true}
         alt="Background"
@@ -53,10 +58,9 @@ const Main = () => {
         priority
         style={{
           zIndex: -1,
-          marginTop: 1400,
+          marginTop: 2800,
         }}
       />
-
 
       <div className="border-none bg-background/60 dark:bg-black-100/50 w-full mt-5">
         <Nsa />

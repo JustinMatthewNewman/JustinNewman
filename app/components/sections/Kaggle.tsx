@@ -21,11 +21,12 @@ export default function Kaggle() {
         fill={true}
         alt="Background"
         className="hidden lg:block"
+        objectFit="cover"
         quality={100}
         priority
         style={{
           zIndex: -1,
-          marginTop: 500,
+          marginTop: -600,
           opacity: 0.3,
         }}
       />
@@ -66,7 +67,7 @@ export default function Kaggle() {
             className="rounded"
             src="https://github.com/justinmatthewnewman.png"
             width={40}
-          />
+            />
           <div className="flex flex-col">
             <p className="text-md">
               Computer Science and Data Analytics Graduate
@@ -101,7 +102,7 @@ export default function Kaggle() {
             isExternal
             showAnchorIcon
             href="https://www.kaggle.com/code/justinmnewman/sub-classifying-ovarian-cancer-with-tensorflow2"
-          >
+            >
             Visit notebook on Kaggle.
           </Link>
         </CardFooter>
