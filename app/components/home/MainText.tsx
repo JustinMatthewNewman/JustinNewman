@@ -6,7 +6,7 @@ export default function MainText() {
       <h2
         style={{
           marginLeft: "12px",
-          fontSize: "2rem",
+          fontSize: "2.5rem",
           fontWeight: "700",
           fontFamily:
           "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",

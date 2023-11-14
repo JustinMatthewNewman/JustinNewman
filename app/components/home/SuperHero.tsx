@@ -5,9 +5,9 @@ import MainContent from "./MainContent";
 export default function SuperHero() {
   return (
     <div>
-      <div className="container lg:h-screen h-auto flex flex-col md:flex-row items-center justify-center mt-12 gap-4 max-w-[1200px]">
+      <div className="container lg:h-[40vh] h-auto flex flex-col md:flex-row items-center justify-center mt-12 gap-4 max-w-[1200px]">
         <MainText />
-        {/* <MainContent /> */}
+        <MainContent />
       </div>
     </div>
   );

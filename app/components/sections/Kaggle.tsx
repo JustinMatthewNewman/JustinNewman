@@ -10,26 +10,11 @@ import {
 } from "@nextui-org/react";
 import SocialKaggle from "../extras/socialkaggle/SocialKaggle";
 import SocialKaggle2 from "../extras/socialkaggle/SocialKaggle2";
-import DNA from "../../../public/images/background/platform-dna2.png";
 import Image from "next/image";
 
 export default function Kaggle() {
   return (
     <div>
-      <Image
-        src={DNA}
-        fill={true}
-        alt="Background"
-        className="hidden lg:block"
-        objectFit="cover"
-        quality={100}
-        priority
-        style={{
-          zIndex: -1,
-          marginTop: -600,
-          opacity: 0.3,
-        }}
-      />
       <Card className="max-w-[1200px] mt-6 mb-6">
         <CardHeader className="flex gap-3">
           <div className="flex flex-col">
