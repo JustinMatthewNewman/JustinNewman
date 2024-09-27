@@ -55,8 +55,7 @@ export default function ResumePage() {
               "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
           }}
         >
-          Jr. Software Engineer ⋄ justin.newman@metalinguist.com ⋄ Metalinguist
-          LLC
+          Jr. Software Developer ⋄ jmnewman@ecslimited.com ⋄ ECS Limited
         </h4>
       </div>
 

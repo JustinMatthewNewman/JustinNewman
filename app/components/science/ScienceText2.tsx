@@ -19,15 +19,7 @@ export default function ScienceText2() {
         >
         Each question leads to an answer and every answer{" "}
         <span
-        className="hover:scale-110 ease-in duration-300"
-          style={{
-            backgroundImage:
-            "linear-gradient(327deg, rgba(122,230,222,1) 0%, rgba(92,38,240,1) 50%, rgba(0,181,255,1) 100%)",
-            WebkitBackgroundClip: "text",
-            color: "transparent",
-            display: "inline-block",
-          }}
-          >
+        className="text-gradient hover:scale-110 ease-in duration-300" >
             inspires
         </span>
         {" "}new questions.

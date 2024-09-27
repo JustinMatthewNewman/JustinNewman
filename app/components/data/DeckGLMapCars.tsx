@@ -36,7 +36,9 @@ const DATA_URL_0 =
   const DATA_URL_5 =
   "https://raw.githubusercontent.com/JustinMatthewNewman/data200_database/371ba005f1dffb6dad0716a9b4d27c77066979f8/file_5.csv"; // eslint-disable-line
 
-  
+
+  type DataPoint = [longitude: number, latitude: number];
+
 const ambientLight = new AmbientLight({
   color: [255, 255, 255],
   intensity: 1.0,
@@ -181,7 +183,7 @@ export default function DeckGLMapCars({
           new Promise((resolve) => {
             csv(url, (error, response) => {
               if (!error) {
-                const parsedData = response.map((d) => [
+                const parsedData: DataPoint[] = response.map((d) => [
                   Number(d.End_Lng),
                   Number(d.End_Lat),
                 ]);
@@ -230,7 +232,7 @@ export default function DeckGLMapCars({
   
   console.log(data);
   const layers = [
-    new HexagonLayer({
+    new HexagonLayer<DataPoint>({
       id: "heatmap",
       colorRange: COLOR,
       coverage,
@@ -238,7 +240,7 @@ export default function DeckGLMapCars({
       elevationRange: [0, 3000],
       elevationScale: data && data.length ? 300 : 0,
       extruded: true,
-      getPosition: (d) => d,
+      getPosition: (d: DataPoint) => d,
       pickable: true,
       radius,
       upperPercentile,

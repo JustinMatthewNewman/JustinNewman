@@ -33,7 +33,10 @@ function BackgroundImage() {
         priority
         style={{
           zIndex: -1,
-          position: 'fixed'
+          position: 'fixed',
+          backdropFilter: 'blur(15px)',
+          opacity: 0.1,
+          height: '100%'
 
         }}
       />

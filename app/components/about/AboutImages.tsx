@@ -108,6 +108,7 @@ export default function AboutImages() {
             <div className="flex gap-5">
               <Avatar
                 isBordered
+                color="secondary"
                 radius="full"
                 size="md"
                 src="https://github.com/justinmatthewnewman.png"

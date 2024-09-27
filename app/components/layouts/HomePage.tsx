@@ -6,6 +6,7 @@ import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import bgLines from "../../../public/images/background/looper-pattern2.svg";
 import lines from "../../../public/images/background/bitmap7.svg";
 
+import Ecs from "../sections/ECS";
 import Cuda from "../sections/Cuda";
 import Nsa from "../sections/Nsa";
 import DataViz from "../sections/DataViz";
@@ -21,6 +22,12 @@ import Image from "next/image";
 const Main = () => {
   return (
     <div className="w-full">
+
+      <div className="border-none bg-background/60 dark:bg-black-100/50 w-full mt-5">
+        <Ecs />
+      </div>
+
+
       <div className="flex flex-col md:flex-row items-center justify-center m-5 gap-4">
         <Kaggle />
       </div>
@@ -53,7 +60,7 @@ const Main = () => {
         priority
         style={{
           zIndex: -1,
-          marginTop: 1400,
+          marginTop: 2450,
         }}
       />
 

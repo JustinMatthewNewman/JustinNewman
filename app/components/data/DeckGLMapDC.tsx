@@ -67,7 +67,7 @@ const controllerSettings = {
 };
   
 
-
+type DataPoint = [longitude: number, latitude: number];
 type Color = [number, number, number];
 
 const colorRange2: Color[] = [
@@ -155,7 +155,7 @@ export default function DeckGLMapDC({
       // Fetch data from DATA_URL
       csv(DATA_URL, (error, response) => {
         if (!error) {
-          const parsedData = response.map((d) => [
+          const parsedData: DataPoint[] = response.map((d) => [
             Number(d.Long),
             Number(d.Lat),
           ]);
@@ -196,7 +196,7 @@ export default function DeckGLMapDC({
   }, [initialData, sem]);
   console.log(data);
   const layers = [
-    new HexagonLayer({
+    new HexagonLayer<DataPoint>({
       id: "heatmap",
       colorRange: COLOR,
       coverage,
@@ -204,7 +204,7 @@ export default function DeckGLMapDC({
       elevationRange: [0, 3000],
       elevationScale: data && data.length ? 4 : 0,
       extruded: true,
-      getPosition: (d) => d,
+      getPosition: (d: DataPoint) => d,
       pickable: true,
       radius,
       upperPercentile,

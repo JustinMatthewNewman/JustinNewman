@@ -27,6 +27,7 @@ export default function AboutInfo() {
         <div className="flex gap-5">
           <Avatar
             isBordered
+            color="secondary"
             radius="full"
             size="md"
             src="https://github.com/justinmatthewnewman.png"

@@ -14,41 +14,17 @@ export default function AppsText() {
         >
         The nexus of innovation in sports analytics. All new automated{" "}
         <span
-        className="hover:scale-110 ease-in duration-300"
-          style={{
-            backgroundImage:
-            "linear-gradient(240deg, rgba(122,230,212,1) 0%, rgba(38,240,227,1) 27%, rgba(0,212,255,1) 100%)",
-            WebkitBackgroundClip: "text",
-            color: "transparent",
-            display: "inline-block",
-          }}
-          >
+        className="text-gradient hover:scale-110 ease-in duration-300" >
           statistical
         </span>
         {" "}team athletic{" "}
         <span
-        className="hover:scale-110 ease-in duration-300"
-          style={{
-            backgroundImage:
-            "linear-gradient(327deg, rgba(122,230,222,1) 0%, rgba(92,38,240,1) 50%, rgba(0,181,255,1) 100%)",
-            WebkitBackgroundClip: "text",
-            color: "transparent",
-            display: "inline-block",
-          }}
-          >
+        className="text-gradient hover:scale-110 ease-in duration-300" >
             graphic
         </span>
         {" "}rendering{" "}
         <span
-        className="hover:scale-110 ease-in duration-300"
-          style={{
-            backgroundImage:
-            "linear-gradient(345deg, rgba(230,122,122,1) 0%, rgba(139,38,240,1) 50%, rgba(255,0,249,1) 100%)",
-            WebkitBackgroundClip: "text",
-            color: "transparent",
-            display: "inline-block",
-          }}
-          >
+        className="text-gradient hover:scale-110 ease-in duration-300" >
             software
         </span>
         {" "}transforms raw data into captivating visuals, empowering coaches, analysts, and fans to unlock the hidden stories within the game.

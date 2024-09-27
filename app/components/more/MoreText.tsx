@@ -14,17 +14,7 @@ function MoreText() {
         className="leading-tight"
       >
         Sculpt the product into a {" "}
-        <span
-                  className="hover:scale-110 ease-in duration-300"
-
-          style={{
-            backgroundImage:
-              "linear-gradient(45deg, rgba(230,122,122,1) 0%, rgba(139,38,240,1) 50%, rgba(255,0,249,1) 100%)",
-            WebkitBackgroundClip: "text",
-            color: "transparent",
-            display: "inline-block",
-          }}
-        >
+        <span className="hover:scale-110 ease-in duration-300" >
           masterpiece
         </span>{" "}
         not for glory or {" "}
@@ -56,16 +46,7 @@ function MoreText() {
         </span>{" "}
         the light within and {" "}
         <span
-                  className="hover:scale-110 ease-in duration-300"
-
-          style={{
-            backgroundImage:
-              "linear-gradient(345deg, rgba(230,122,122,1) 0%, rgba(139,38,240,1) 50%, rgba(255,0,249,1) 100%)",
-            WebkitBackgroundClip: "text",
-            color: "transparent",
-            display: "inline-block",
-          }}
-        >
+                  className="hover:scale-110 ease-in duration-300" >
           illuminate
         </span>{" "}
         the darkness without.

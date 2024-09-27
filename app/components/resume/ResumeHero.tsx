@@ -15,15 +15,7 @@ export default function ResumeHero() {
         >
        Justin M.{" "}
         <span
-        className="hover:scale-110 ease-in duration-300"
-          style={{
-            backgroundImage:
-            "linear-gradient(240deg, rgba(122,230,212,1) 0%, rgba(38,240,227,1) 27%, rgba(0,212,255,1) 100%)",
-            WebkitBackgroundClip: "text",
-            color: "transparent",
-            display: "inline-block",
-          }}
-          >
+        className="text-gradient hover:scale-110 ease-in duration-300" >
           Newman
         </span>
         </h2>

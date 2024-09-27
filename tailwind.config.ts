@@ -28,7 +28,7 @@ const config: Config = {
             background: '#ffffff',
             foreground: '#000000',  
             primary: '#0ea5e9',
-            secondary: '#64748b',
+            secondary: '#028dde',
           }
         },
         
@@ -38,7 +38,7 @@ const config: Config = {
             background: '#141519',
             foreground: '#f4f4f5',
             primary: '#4e74a5', 
-            secondary: '#9353d3',
+            secondary: '#028dde',
           }
         },  
         modern: {

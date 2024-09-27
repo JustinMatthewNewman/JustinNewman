@@ -3,6 +3,7 @@ import React from "react";
 import { Card, CardHeader, CardBody, Divider, Badge, Link } from "@nextui-org/react";
 import CheckBoxRow from "../extras/checkboxrow/CheckBoxRow";
 import CheckBoxRowMeta from "../extras/checkboxrow/CheckBoxRowMeta";
+import CheckBoxRowECS from "../extras/checkboxrow/CheckBoxRowECS";
 import AmazonCard from "./AmazonCard";
 import MassCard from "./MassCard";
 import ChefCard from "./ChefCard";
@@ -12,7 +13,7 @@ import Image from "next/image";
 import ghidra from '../../../public/images/resume/g.avif'
 import metalinguist from '../../../public/images/resume/logo.avif'
 import tele from '../../../public/images/resume/tele.webp'
-
+import ecs from '../../../public/images/resume/ecs.jpg'
 
 export default function ResumeContentRows() {
   return (
@@ -48,6 +49,59 @@ export default function ResumeContentRows() {
       <Card className="mt-6">
         <CardHeader className="justify-between">
           <div className="flex flex-col">
+            <p className="text-md">ECS APPLICATION SUPPORT TEAM</p>
+
+            <div className="flex flex-col  ">
+              <p className="text-small text-default-500 items-left">
+                Jr Software Developer
+              </p>
+              <p className="text-small text-default-500 items-right">
+                12/04/2023 - Present
+              </p>
+
+            </div>
+          </div>
+          <Card className="p-2 bg-slate-200">
+          <Link   href="https://ecslimited.com" isExternal>
+          <Image width={120} src={ecs} alt={""} className="justify-right"/>
+          </Link>
+          </Card>
+
+        </CardHeader>
+        <Divider />
+        <CardBody>
+          <div className="mt-1 mb-4">
+            <CheckBoxRowECS />
+          </div>
+
+          <p>We offer dynamic, multi-disciplinary solutions. Our geotechnical, construction materials, environmental and facilities teams collaborate to add value across the project lifecycle. During my time at ECS I have:</p>
+          <ul className="p-4">
+            <li className="mt-2 mb-2">
+              Resolved hundreds of <span className="font-bold">user requests</span>, ensuring efficient and in depth support for various applications across ECS.
+            </li>
+            <li className="mt-2 mb-2">
+              Collected and implemented <span className="font-bold">custom reports</span> by creating refined SQL queries and stored procedures to meet client-specific reporting needs.
+            </li>
+            <li className="mt-2 mb-2">
+              Implemented <span className="font-bold">clean and reusable solutions</span> for urgent and high-priority requests, mitigating issues and improving system stability.
+            </li>
+            <li className="mt-2 mb-2">
+              Refactored dozens of convoluted legacy components,<span className="font-bold"> enhancing code readability, maintainability, and performance </span>across the system.
+            </li>
+            <li className="mt-2 mb-2">
+              Actively contribute to <span className="font-bold">team discussions</span>, working collaboratively to improve processes and share best practices across the Team.
+              Coordinated meetings with principal engineers and senior software developers to help expedite bug fixes and feature requests, ensuring <span className="font-bold">efficient communication and faster delivery of solutions.</span>
+            </li>
+            <li className="mt-2 mb-2">
+              Play a key role in <span className="font-bold">consistently contributing to ECS’s growth</span>,  through technical and process-related contributions.
+            </li>
+          </ul>
+        </CardBody>
+      </Card>
+
+      <Card className="mt-6">
+        <CardHeader className="justify-between">
+          <div className="flex flex-col">
             <p className="text-md">AGILE DEVELOPMENT EXPERIENCE</p>
 
             <div className="flex flex-col  ">
@@ -55,7 +109,7 @@ export default function ResumeContentRows() {
                 Jr Software Engineer
               </p>
               <p className="text-small text-default-500 items-right">
-                2/22/2023 - Present
+                2/22/2023 - 12/04/2023
               </p>
 
             </div>

@@ -18,7 +18,7 @@ function AboutText() {
         className="hover:scale-110 ease-in duration-300"
           style={{
             backgroundImage:
-            "linear-gradient(240deg, rgba(122,230,212,1) 0%, rgba(38,240,227,1) 27%, rgba(0,212,255,1) 100%)",
+            "linear-gradient(240deg, rgba(2, 141, 222,1) 0%, rgba(2, 112, 222,1) 27%, rgba(2, 112, 222,1) 100%)",
             WebkitBackgroundClip: "text",
             color: "transparent",
             display: "inline-block",
@@ -31,7 +31,7 @@ function AboutText() {
         className="hover:scale-110 ease-in duration-300"
           style={{
             backgroundImage:
-            "linear-gradient(327deg, rgba(122,230,222,1) 0%, rgba(92,38,240,1) 50%, rgba(0,181,255,1) 100%)",
+            "linear-gradient(145deg, rgba(51, 173, 255,1) 0%, rgba(51, 160, 255,1) 50%, rgba(68, 157, 235,1) 100%)",
             WebkitBackgroundClip: "text",
             color: "transparent",
             display: "inline-block",
@@ -44,7 +44,7 @@ function AboutText() {
         className="hover:scale-110 ease-in duration-300"
           style={{
             backgroundImage:
-            "linear-gradient(345deg, rgba(230,122,122,1) 0%, rgba(139,38,240,1) 50%, rgba(255,0,249,1) 100%)",
+            "linear-gradient(345deg, rgba(51, 173, 255,1) 0%, rgba(51, 160, 255,1) 50%, rgba(68, 157, 235,1) 100%)",
             WebkitBackgroundClip: "text",
             color: "transparent",
             display: "inline-block",
