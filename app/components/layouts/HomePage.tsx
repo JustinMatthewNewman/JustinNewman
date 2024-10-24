@@ -18,10 +18,15 @@ import Infocard from "../extras/info/InfoCard";
 import Infocard2 from "../extras/info/InfoCard2";
 
 import Image from "next/image";
+import AdminDashboard from "../sections/AdminDashboard";
 
 const Main = () => {
   return (
     <div className="w-full">
+
+      <div className="flex flex-col md:flex-row items-center justify-center m-5 gap-4">
+        <AdminDashboard />
+      </div>
 
       <div className="border-none bg-background/60 dark:bg-black-100/50 w-full mt-5">
         <Ecs />

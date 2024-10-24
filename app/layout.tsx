@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Justin Matthew Newman',
-  description: 'Software Engineer, Artist, Designer, Muscian. | Metalinguist LLC'
+  description: 'Software Engineer, Artist, Designer, Muscian. | ECS Limited'
 }
 
 export default function RootLayout({
@@ -33,8 +33,7 @@ export default function RootLayout({
           </header>
           <main>{children}</main>
           <footer>
-          <Footer/>
-
+            <Footer/>
           </footer>
         </Providers>
       </body>
