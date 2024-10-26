@@ -8,7 +8,7 @@ import {
 } from "@nextui-org/react";
 
 import MapLayer from './MapLayer';
-import DeckGLMapDC from "../data/DeckGLMapDC";
+import ECS_Offices_DeckGLMap from "../data/ECS_Offices_DeckGLMap";
 import {Input} from "@nextui-org/react";
 import {SearchIcon} from "./SearchIcon";
 import Image from "next/image";
@@ -19,6 +19,12 @@ export default function PointfinderMap() {
     <Card className="w-full h-[30rem] p-4 z-10 ">
       <CardHeader className="flex gap-3">
       
+      <Card className="p-2">
+          <Link   href="https://ecslimited.com" isExternal>
+          <Image width={69} src={ecs} alt={""} className="justify-right"/>
+          </Link>
+      </Card>
+
       <Input
         label="Search"
         isClearable
@@ -50,18 +56,12 @@ export default function PointfinderMap() {
         }
       />
       
-      <Card className="p-2">
-          <Link   href="https://ecslimited.com" isExternal>
-          <Image width={69} src={ecs} alt={""} className="justify-right"/>
-          </Link>
-          </Card>
-        
-        
+
       </CardHeader>
-      <Divider />
-      <CardBody>
+      <CardBody className="rounded-lg border border-transparent overflow-hidden">
+
         <div>
-            <DeckGLMapDC data={undefined} />
+            <ECS_Offices_DeckGLMap data={undefined} />
         </div>
       </CardBody>
     </Card>
