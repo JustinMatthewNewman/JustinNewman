@@ -35,7 +35,7 @@ const data = [
 
 export default function LineChartComponent() {
   return (
-    <Card className="w-full mt-6 mb-6 z-10">
+    <Card className="w-full h-[30rem] z-10">
       <CardHeader>
         <h2>ECS Office Sales 2023 YTD</h2>
       </CardHeader>

@@ -7,13 +7,22 @@ import {
   CardBody,
   Divider
 } from "@nextui-org/react";
-import FloatingText from "../extras/FloatingText";
 
-function Ecs() {
+function Ecs2() {
   return (
     <Card>
       <CardHeader>
-        <FloatingText/>
+        <h2
+          style={{
+            marginLeft: "12px",
+            fontSize: "3rem",
+            fontWeight: "700",
+            fontFamily:
+              "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
+          }}
+        >
+          ECS Limited
+        </h2>
       </CardHeader>
       <Divider />
       <CardBody>
@@ -45,4 +54,4 @@ function Ecs() {
   );
 }
 
-export default Ecs;
+export default Ecs2;

@@ -19,75 +19,18 @@ import Infocard2 from "../extras/info/InfoCard2";
 
 import Image from "next/image";
 import AdminDashboard from "../sections/AdminDashboard";
+import FloatingText from "../extras/FloatingText";
 
 const Main = () => {
   return (
     <div className="w-full">
 
-      <div className="flex flex-col md:flex-row items-center justify-center m-5 gap-4">
+      <div className="flex flex-col md:flex-row items-center justify-center m-6 gap-4">
         <AdminDashboard />
-      </div>
-
-      <div className="border-none bg-background/60 dark:bg-black-100/50 w-full mt-5">
-        <Ecs />
-      </div>
-
-
-      <div className="flex flex-col md:flex-row items-center justify-center m-5 gap-4">
-        <Kaggle />
-      </div>
-
-      <div className="border-none bg-background/60 dark:bg-black-100/50 w-full mt-5">
-        <Cuda />
       </div>
 
       <div>
         <SocialCards />
-      </div>
-
-      <Image
-        fill={true}
-        src={bgLines}
-        alt="Background"
-        quality={100}
-        priority
-        style={{
-          zIndex: -1,
-          marginTop: -195,
-        }}
-      />
-      <Image
-        src={lines}
-        fill={true}
-        alt="Background"
-        className="hidden lg:block"
-        quality={100}
-        priority
-        style={{
-          zIndex: -1,
-          marginTop: 2450,
-        }}
-      />
-
-
-      <div className="border-none bg-background/60 dark:bg-black-100/50 w-full mt-5">
-        <Nsa />
-      </div>
-
-      <div className="flex flex-col md:flex-row items-center justify-center m-5">
-        <Infocard />
-      </div>
-
-      <div className="border-none bg-background/60 dark:bg-black-100/50 w-full mt-5">
-        <DataViz />
-      </div>
-
-      <div className="flex flex-col md:flex-row items-center justify-center m-5 gap-4">
-        <Infocard2 />
-      </div>
-
-      <div className="border-none bg-background/60 dark:bg-black-100/50 w-full mt-5">
-        <PostQuantum />
       </div>
 
       <div className="flex justify-center py-12">
