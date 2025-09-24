@@ -41,7 +41,7 @@ export default function ResumePage() {
               "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
           }}
         >
-          +1(804) 832-9881 ⋄ Woodbridge, VA
+          +1(804) 832-9881 ⋄ Fairfax, VA
         </h4>
       </div>
 
@@ -55,7 +55,7 @@ export default function ResumePage() {
               "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
           }}
         >
-          Jr. Software Developer ⋄ jmnewman@ecslimited.com ⋄ ECS Limited
+          Jr. Software Developer ⋄ CsWithJustin@gmail.com ⋄ ECS Limited
         </h4>
       </div>
 
