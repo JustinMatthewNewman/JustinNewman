@@ -16,6 +16,8 @@ function AboutPage() {
         <AboutContent />
       </div>
 
+      
+
       <div className="flex justify-center py-12">
         <Link href="/about">
           <div className="rounded-full shadow-lg p-4 cursor-pointer hover:scale-110 ease-in duration-300">
