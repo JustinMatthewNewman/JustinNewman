@@ -42,7 +42,7 @@ export default function LineChartComponent() {
       <CardBody>
         <ResponsiveContainer width="100%" height={400}>
           <AreaChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
+            <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.2} />
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />

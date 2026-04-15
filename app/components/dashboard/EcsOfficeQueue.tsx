@@ -2,8 +2,7 @@ import { Accordion, AccordionItem, Avatar } from "@nextui-org/react";
 import React from "react";
 
 export default function EcsOfficeQueue() {
-  const defaultContent =
-    "Office located at 1050 International Boulevard, Clarksville, TN 37040. Contact: 931.241.6512.";
+  const defaultContent = " ";
 
   const offices = [
     {
