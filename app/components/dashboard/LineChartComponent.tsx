@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { useTheme } from "next-themes";
 import {
   Card,
   CardHeader,
@@ -33,7 +36,28 @@ const data = [
   { name: 'December', 'Office - 01': 7877, 'Office - 02': 9888, 'Office - 03': 7006, 'Office - 04': 14567 },
 ];
 
+function CustomTooltip({ active, payload, label, theme }: { active?: boolean; payload?: any[]; label?: string; theme?: string }) {
+  if (!active || !payload || payload.length === 0) {
+    return null;
+  }
+
+  const isDark = theme === "dark";
+
+  return (
+    <div className={`rounded-xl border p-3 shadow-xl ${isDark ? 'bg-slate-900 border-slate-700 text-slate-100' : 'bg-white border-slate-200 text-slate-900'}`}>
+      <p className="mb-2 text-sm font-semibold">{label}</p>
+      {payload.map((entry) => (
+        <div key={entry.dataKey || entry.name} className="text-sm leading-snug">
+          <span className="block font-medium">{entry.dataKey}: {entry.value}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function LineChartComponent() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <Card className="w-full h-[30rem] z-10">
       <CardHeader>
@@ -45,7 +69,7 @@ export default function LineChartComponent() {
             <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.2} />
             <XAxis dataKey="name" />
             <YAxis />
-            <Tooltip />
+            <Tooltip content={<CustomTooltip theme={resolvedTheme} />} />
             <Legend />
 
             {/* Area and Line for Office - 01 */}
