@@ -4,16 +4,19 @@ import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 
 import AdminDashboard from "../sections/AdminDashboard";
 import SocialCards from "../extras/social/SocialCards";
+import LandingHero from "../dashboard/LandingHero";
 
 const Main = () => {
   return (
     <div className="w-full">
 
+      <LandingHero />
+      
       <div className="flex flex-col md:flex-row items-center justify-center m-6 gap-4">
         <AdminDashboard />
       </div>
 
-      <div>
+      {/* <div>
         <SocialCards />
       </div>
 
@@ -23,7 +26,9 @@ const Main = () => {
             <HiOutlineChevronDoubleUp size={30} />
           </div>
         </Link>
-      </div>
+      </div> */}
+
+      
     </div>
   );
 };

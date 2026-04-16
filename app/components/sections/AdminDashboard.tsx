@@ -6,15 +6,14 @@ import LineChart from "../dashboard/LineChartComponent";
 import SchedulePanel from "../dashboard/SchedulePanel";
 import Ecs from "./ECS";
 import Ecs2 from "./ECS2";
+import SkillsRow from "../dashboard/SkillsRow";
 
 export default function AdminDashboard() {
   return (
     <div className="w-full max-w-[1400px]">
 
-      <div className="border-none bg-background/60 dark:bg-black-100/50 w-full">
-        <Ecs />
-      </div>
-
+      <SkillsRow/>
+{/* 
       <div className="flex flex-col md:flex-row items-center justify-center mt-6 gap-6">
         <div className="w-full md:w-2/3">
           <PointfinderMap/>
@@ -31,11 +30,8 @@ export default function AdminDashboard() {
         <div className="w-full md:w-3/4">
           <LineChart/>
         </div>
-      </div>
+      </div> */}
 
-      <div className="border-none bg-background/60 dark:bg-black-100/50 w-full mt-5">
-        <Ecs2 />
-      </div>
 
     </div>
   );

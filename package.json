@@ -36,6 +36,7 @@
     "react-map-gl": "^7.1.6",
     "react-native-responsive-linechart": "^5.7.1",
     "react-type-animation": "^3.2.0",
+    "react-use-measure": "^2.1.7",
     "react-youtube": "^10.1.0",
     "recharts": "^2.12.7",
     "sharp": "^0.32.6",
