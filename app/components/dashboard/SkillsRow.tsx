@@ -2,7 +2,7 @@ import React from 'react'
 
 function SkillsRow() {
   return (
-    <div>
+    <div className="w-full max-w-[1400px]">
        {/* CORE STATS (Experience Metrics) */}
         <div className="grid grid-cols-2 md:grid-cols-4 border-b border-t border-slate-500/20">
           {[
