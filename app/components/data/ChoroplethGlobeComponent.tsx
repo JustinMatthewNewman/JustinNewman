@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Globe from "react-globe.gl";
 import * as d3 from "d3";
-import countriesData from "../../../public/data/earth.json";
+import countriesData from "@/public/data/earth.json";
 import { useTheme } from "next-themes";
 
 function ChoroplethGlobeComponent() {

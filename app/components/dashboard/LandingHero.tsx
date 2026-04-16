@@ -66,7 +66,7 @@ const LandingHero = () => {
             <div className="flex items-center justify-between px-9 py-8 flex-wrap gap-6">
                 <div className="space-y-1">
                     <p className="text-sm font-light italic">
-                        "Design patterns over hardcoded logic."
+                        &quot;Design patterns over hardcoded logic.&quot;
                     </p>
                     <p className="text-[10px] font-mono uppercase tracking-widest">
                         Fairfax, Virginia · +1 (804) 832-9881

@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
-import {Card, CardBody, CardFooter, Skeleton} from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Skeleton } from "@nextui-org/react";
 import Image from "next/image";
 
 import food from "../../../public/images/projects/food.webp";
@@ -13,12 +13,12 @@ import more from "../../../public/images/projects/cs-min.jpeg";
 
 export default function AboutCards() {
   const list = [
-    {
-      title: "Food",
-      img: food,
-      price: "Blog",
-      href: 'https://www.jmufood.com/',
-    },
+    // {
+    //   title: "Food",
+    //   img: food,
+    //   price: "Blog",
+    //   href: 'https://www.jmufood.com/',
+    // },
     {
       title: "Travel",
       img: travel,
@@ -40,18 +40,22 @@ export default function AboutCards() {
   ];
   const [imageLoaded, setImageLoaded] = useState(false);
   return (
-    <div className="gap-4 grid grid-cols-1 md:grid-cols-4">
+    <div className="gap-3 grid grid-cols-1 md:grid-cols-3">
       {list.map((item, index) => (
-        <Card shadow="sm" key={index} isHoverable isPressable onPress={() => window.open(item.href)}>
+        <Card shadow="sm" key={index} isHoverable isPressable onPress={() => {
+          if (typeof window !== "undefined") {
+            window.open(item.href, "_blank");
+          }
+        }}>
           <CardBody className="overflow-visible p-2">
-          <Skeleton isLoaded={imageLoaded} className="rounded-lg">
-            <Image
-              alt={item.title}
-              className="w-full object-cover h-[240px] rounded-xl"
-              src={item.img}
-              onLoad={() => setImageLoaded(true)}
+            <Skeleton isLoaded={imageLoaded} className="rounded-lg">
+              <Image
+                alt={item.title}
+                className="w-full object-cover h-[240px] rounded-xl"
+                src={item.img}
+                onLoad={() => setImageLoaded(true)}
               />
-              </Skeleton>
+            </Skeleton>
           </CardBody>
           <CardFooter className="text-small justify-between">
             <b>{item.title}</b>

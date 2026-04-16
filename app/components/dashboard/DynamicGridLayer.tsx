@@ -17,7 +17,7 @@ interface GridBounds {
   height: number;
 }
 
-const useGridPositions = (width: number, height: number): GridBounds => {
+const getGridPositions = (width: number, height: number): GridBounds => {
   if (!width || !height) {
     return { x1: 0, y1: 0, x2: 0, y2: 0, width: 0, height: 0 };
   }
@@ -136,7 +136,7 @@ const DynamicGridLayer = () => {
         if (prev.length >= MAX_ANIMATIONS) return prev;
 
         const id = Date.now();
-        const pos = useGridPositions(bounds.width, bounds.height);
+        const pos = getGridPositions(bounds.width, bounds.height);
 
         setTimeout(() => {
           setAnimations((cur) => cur.filter((a) => a.id !== id));
