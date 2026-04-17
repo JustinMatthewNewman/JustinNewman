@@ -9,8 +9,8 @@ export default function Home() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr', gridTemplateRows: 'auto 1fr', overflowX: 'hidden' }}>
 
         <div className='flex items-center justify-center flex-col'>
-          <FloatingText/>
           <Main />
+          <FloatingText/>
         </div>
       </div>
     </section>
